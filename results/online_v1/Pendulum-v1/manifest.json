@@ -1,0 +1,69 @@
+{
+  "config": {
+    "num_envs": 4,
+    "num_critics": 4,
+    "num_steps": 8,
+    "num_duplicates": 1,
+    "buffer_size": 32768,
+    "batch_size": 128,
+    "fill_buffer": 1024,
+    "num_epochs": 8,
+    "hidden_layer_sizes": [
+      64,
+      64
+    ],
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "polyak": 0.995,
+    "tau_actor": 0.3,
+    "tau_target": 0.3
+  },
+  "arguments": {
+    "env": "Pendulum-v1",
+    "steps": 65536,
+    "eval_every": 8192,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "output": "results/online_v1"
+  },
+  "jax": "0.4.38",
+  "devices": [
+    "cuda:0"
+  ],
+  "source_sha256": {
+    "run_online.py": "9812bac8f67a496df5224874ba28cf57739c3e145da4d6c09d26a873322794e8",
+    "online_bag_eql.py": "8fc609d71aea92f57c311ed85985973f963a73e48b8303eb25362273f161d752",
+    "bagging_buffer.py": "c665025e95ce7b0deabfa28a945fb423f648dcedb3812ba434a549368e8dd8ca",
+    "expectile.py": "88b3a742e77eb5cedb8ff89ca602c26c39a23281ad8869a83672fedb074a6f88"
+  },
+  "evaluation": "64 stochastic-policy episodes, separate deterministic eval keys",
+  "unit": "environment transitions across all 4 environments",
+  "fragment_semantics": "fixed 8-step rollout per environment; not complete episodes",
+  "groups": {
+    "A": [
+      "shared",
+      "shared"
+    ],
+    "B": [
+      "bag",
+      "shared"
+    ],
+    "C": [
+      "shared",
+      "own"
+    ],
+    "D": [
+      "bag",
+      "own"
+    ]
+  }
+}

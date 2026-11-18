@@ -1,0 +1,238 @@
+{
+  "rows": [
+    {
+      "env": "Pendulum-v1",
+      "group": "A",
+      "mean": -156.89773559570312,
+      "sd": 8.664224202680957,
+      "seed0": -166.85169982910156,
+      "seed1": -151.05027770996094,
+      "seed2": -152.79122924804688,
+      "auc_mean": -629.8631610870361,
+      "disagreement_mean": 0.4639345208803813,
+      "training_seconds_mean": 5.783884040666635,
+      "wall_seconds_total": 31.374661454999966
+    },
+    {
+      "env": "Pendulum-v1",
+      "group": "B",
+      "mean": -156.269775390625,
+      "sd": 13.514689597005056,
+      "seed0": -171.87490844726562,
+      "seed1": -148.38534545898438,
+      "seed2": -148.549072265625,
+      "auc_mean": -645.1413078308105,
+      "disagreement_mean": 0.49494444330533344,
+      "training_seconds_mean": 5.668528234333432,
+      "wall_seconds_total": 31.038568776000034
+    },
+    {
+      "env": "Pendulum-v1",
+      "group": "C",
+      "mean": -152.19918314615884,
+      "sd": 5.9070242510044615,
+      "seed0": -158.94937133789062,
+      "seed1": -149.672119140625,
+      "seed2": -147.97605895996094,
+      "auc_mean": -619.7125781377157,
+      "disagreement_mean": 5.235168933868408,
+      "training_seconds_mean": 5.699714708666609,
+      "wall_seconds_total": 43.06235191099995
+    },
+    {
+      "env": "Pendulum-v1",
+      "group": "D",
+      "mean": -159.4145762125651,
+      "sd": 18.877460039881104,
+      "seed0": -181.2123565673828,
+      "seed1": -148.54849243164062,
+      "seed2": -148.48287963867188,
+      "auc_mean": -627.3163722356161,
+      "disagreement_mean": 5.516199270884196,
+      "training_seconds_mean": 5.64830578466668,
+      "wall_seconds_total": 31.60860482099997
+    },
+    {
+      "env": "Reacher-misc",
+      "group": "A",
+      "mean": 42.3485107421875,
+      "sd": 3.683150966739763,
+      "seed0": 39.793819427490234,
+      "seed1": 40.68124008178711,
+      "seed2": 46.570472717285156,
+      "auc_mean": 21.197756588459015,
+      "disagreement_mean": 0.5001851618289948,
+      "training_seconds_mean": 6.844720167666651,
+      "wall_seconds_total": 39.140488023999865
+    },
+    {
+      "env": "Reacher-misc",
+      "group": "B",
+      "mean": 32.692064921061196,
+      "sd": 6.4672006924858,
+      "seed0": 27.452232360839844,
+      "seed1": 30.70407485961914,
+      "seed2": 39.91988754272461,
+      "auc_mean": 18.973054428895313,
+      "disagreement_mean": 0.5417466163635254,
+      "training_seconds_mean": 7.943993720999932,
+      "wall_seconds_total": 42.40271584899983
+    },
+    {
+      "env": "Reacher-misc",
+      "group": "C",
+      "mean": 43.1537119547526,
+      "sd": 3.228632169776089,
+      "seed0": 39.464134216308594,
+      "seed1": 44.535545349121094,
+      "seed2": 45.461456298828125,
+      "auc_mean": 21.921092132727306,
+      "disagreement_mean": 2.365779240926107,
+      "training_seconds_mean": 7.5770233326666885,
+      "wall_seconds_total": 41.00084933599999
+    },
+    {
+      "env": "Reacher-misc",
+      "group": "D",
+      "mean": 39.336411794026695,
+      "sd": 4.092366142490462,
+      "seed0": 35.500389099121094,
+      "seed1": 38.864620208740234,
+      "seed2": 43.64422607421875,
+      "auc_mean": 20.76384375492732,
+      "disagreement_mean": 3.8597148259480796,
+      "training_seconds_mean": 7.382008608999968,
+      "wall_seconds_total": 40.30353955800035
+    }
+  ],
+  "paired_effects": [
+    {
+      "env": "Pendulum-v1",
+      "contrast": "B-A",
+      "mean": 0.627960205078125,
+      "ci95_low": -11.686372037128876,
+      "ci95_high": 12.942292447285126,
+      "paired_seed_differences": [
+        -5.0232086181640625,
+        2.6649322509765625,
+        4.242156982421875
+      ]
+    },
+    {
+      "env": "Pendulum-v1",
+      "contrast": "D-C",
+      "mean": -7.21539306640625,
+      "ci95_low": -39.650956398421336,
+      "ci95_high": 25.220170265608836,
+      "paired_seed_differences": [
+        -22.262985229492188,
+        1.123626708984375,
+        -0.5068206787109375
+      ]
+    },
+    {
+      "env": "Pendulum-v1",
+      "contrast": "C-A",
+      "mean": 4.6985524495442705,
+      "ci95_low": -3.4087985545015735,
+      "ci95_high": 12.805903453590116,
+      "paired_seed_differences": [
+        7.9023284912109375,
+        1.3781585693359375,
+        4.8151702880859375
+      ]
+    },
+    {
+      "env": "Pendulum-v1",
+      "contrast": "D-B",
+      "mean": -3.144800821940104,
+      "ci95_low": -16.470251221857175,
+      "ci95_high": 10.180649577976968,
+      "paired_seed_differences": [
+        -9.337448120117188,
+        -0.16314697265625,
+        0.066192626953125
+      ]
+    },
+    {
+      "env": "Pendulum-v1",
+      "contrast": "interaction",
+      "mean": -7.843353271484375,
+      "ci95_low": -28.447006019310226,
+      "ci95_high": 12.760299476341476,
+      "paired_seed_differences": [
+        -17.239776611328125,
+        -1.5413055419921875,
+        -4.7489776611328125
+      ]
+    },
+    {
+      "env": "Reacher-misc",
+      "contrast": "B-A",
+      "mean": -9.656445821126303,
+      "ci95_low": -16.758656505872978,
+      "ci95_high": -2.554235136379626,
+      "paired_seed_differences": [
+        -12.34158706665039,
+        -9.977165222167969,
+        -6.650585174560547
+      ]
+    },
+    {
+      "env": "Reacher-misc",
+      "contrast": "D-C",
+      "mean": -3.8173001607259116,
+      "ci95_low": -8.614211711389661,
+      "ci95_high": 0.9796113899378374,
+      "paired_seed_differences": [
+        -3.9637451171875,
+        -5.670925140380859,
+        -1.817230224609375
+      ]
+    },
+    {
+      "env": "Reacher-misc",
+      "contrast": "C-A",
+      "mean": 0.8052012125651041,
+      "ci95_low": -5.825453255611738,
+      "ci95_high": 7.435855680741947,
+      "paired_seed_differences": [
+        -0.3296852111816406,
+        3.8543052673339844,
+        -1.1090164184570312
+      ]
+    },
+    {
+      "env": "Reacher-misc",
+      "contrast": "D-B",
+      "mean": 6.644346872965495,
+      "ci95_low": 0.3609051203602265,
+      "ci95_high": 12.927788625570763,
+      "paired_seed_differences": [
+        8.04815673828125,
+        8.160545349121094,
+        3.7243385314941406
+      ]
+    },
+    {
+      "env": "Reacher-misc",
+      "contrast": "interaction",
+      "mean": 5.839145660400391,
+      "ci95_low": 0.33847904472715484,
+      "ci95_high": 11.339812276073626,
+      "paired_seed_differences": [
+        8.37784194946289,
+        4.306240081787109,
+        4.833354949951172
+      ]
+    }
+  ],
+  "gpu": {
+    "peak_total_device_memory_MiB": 2566.0,
+    "peak_temperature_C": 74.0,
+    "sampled_seconds": 599.2299561500549,
+    "note": "Total GPU memory includes Windows desktop and other processes; sampled every 5 seconds, not exact allocator peak."
+  },
+  "total_run_wall_seconds": 299.93177972999996,
+  "validation": "24 runs present; 65536 steps and 16128 updates each; raw returns finite and match logs; same-seed initial evaluations match across groups."
+}

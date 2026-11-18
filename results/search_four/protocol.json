@@ -1,0 +1,57 @@
+{
+  "tasks": [
+    "Pendulum-v1",
+    "Reacher-misc",
+    "Hopper-v5",
+    "Walker2d-v5"
+  ],
+  "methods": [
+    "SAC",
+    "EQL",
+    "EQL_bagging"
+  ],
+  "common": {
+    "num_envs": 10,
+    "num_critics": 10,
+    "total_timesteps": 100000,
+    "learning_rate": 0.0003,
+    "gamma": 0.98
+  },
+  "search_seeds": [
+    101,
+    102
+  ],
+  "confirmation_seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "eql_grid": [
+    {
+      "tau_a": 0.7,
+      "tau_Q": 0.3
+    },
+    {
+      "tau_a": 0.5,
+      "tau_Q": 0.3
+    },
+    {
+      "tau_a": 0.7,
+      "tau_Q": 0.1
+    }
+  ],
+  "sac_grid": [
+    {
+      "learning_rate": 0.0003
+    },
+    {
+      "learning_rate": 0.0001
+    },
+    {
+      "learning_rate": 0.001
+    }
+  ],
+  "duplicates": 2,
+  "criterion": "per-task per-method highest mean final 128-episode return across two search seeds, first in grid breaks ties"
+}

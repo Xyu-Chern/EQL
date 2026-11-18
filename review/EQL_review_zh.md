@@ -1,0 +1,241 @@
+# EQL 草稿审查与续做建议
+
+审查日期：2026-11-18。材料：当前目录 `EQL.pdf` 全部 6 页，以及 `微信图片_20260828074642_81_25.png`。页码均指 PDF 页码。
+
+使用 Supervisor-Skills 的 pre-submission-reviewer 检查论点—方法—证据链，使用 academic-paper → nature-reviewer 组织三个审稿侧重点及综合判断。以下三个 Reviewer 是同一次审查的不同视角，不是三位真实或独立外部审稿人；不以 Nature 的学科范围要求裁定这份 RL 草稿。
+
+## 审查范围与总体结论
+
+**当前材料是一份值得做小规模验证的研究方案，但还不是一篇实验充分、理论闭合的论文。**
+
+- 创新性：有可检验的组合假设，尚未建立足够清楚的独立贡献。重点应转向“轨迹分袋如何影响 critic 相关性、expectile 聚合和价值误差”，不能把 expectile、ensemble 或 bagging 本身当作新发明。
+- 理论：经验 expectile 的一阶条件基本正确；定理 6.1 的无条件梯度结论错误，可以通过限制条件修复。文中还混用了 endpoint 极限、受支持最优值和真实价值下界。
+- 实验：PDF 没有实验章节、学习曲线、数值结果、种子或消融。表 1 是方法对应关系草表，不是实验结果。只能说“提供的材料没有证据”，不能据此断言你在其他位置没有做过实验。
+- 老师白板：是待实施的 trajectory-level bagging 方案，与 §5.2 对应；不是已经完成的实验，也不是有效性的证明。依据你的说明，本报告把它作为未完成工作。
+
+本次已逐页检查 PDF 渲染，核对公式与原始图片；对关键反例和梯度公式进行了独立小型数值验证。没有提供训练代码、日志和数据，因此没有复现实验或审计实现正确性。未改动原 PDF。
+
+## Reviewer 1：理论成立条件与算法定义
+
+总体判断：局部数学工具可用，但目前不能保留“处处 exact gradient”的表述。潜在读者是 ensemble actor-critic、可微聚合与不确定性估计研究者；技术修复比语言润色优先。创新与重要性取决于它能否解释实际误差；跨领域意义目前未建立，符号和版本混杂也妨碍可读性。
+
+### T1 · CRITICAL：定理 6.1 在相等点不成立
+
+**Claim pointer：** 第 4 页定理 6.1、式 (33) 声称经验 expectile 对 action 的 exact gradient 是各 critic 梯度的归一化加权和。
+
+**Evidence pointer：** 第 5 页式 (40) → (41)，第 85–86 行，把扰动后的权重极限直接替换为原点权重。式 (35)–(40) 的消项并不能推出这一步。
+
+取一维 action，两个平滑 critic：
+
+\[
+Q_1(a)=a,\quad Q_2(a)=-a,\quad \tau_Q=\tfrac14.
+\]
+
+两个等权样本的 expectile 为
+
+\[
+y(a)=(1-\tau_Q)\min(a,-a)+\tau_Q\max(a,-a)=-\tfrac12|a|.
+\]
+
+在 a=0，左右导数分别为 +1/2 和 -1/2，不存在普通导数。原式在该点把两个权重都设为 τ_Q，给出 (1 + (-1))/2 = 0，不能称为精确梯度。沿 a=t>0，第二个权重为 3/4，而原点为 1/4；权重极限并不等于原点权重。
+
+**修复与验收：** 改为局部定理：n≥1、τ∈(0,1)、Q_i 在 a₀ 邻域连续可微，且每个 Q_i(a₀)≠y(a₀)。由 expectile 连续性可知局部符号不变，故
+
+\[
+\nabla_a y(a_0)=\frac{\sum_iw_i\nabla_a Q_i(a_0)}{\sum_iw_i}.
+\]
+
+无需对跳变指标硬求导。相等点单独讨论方向导数或广义导数；τ=1/2 时均值的梯度可直接全局成立。不能笼统声称所有 tie 都不可微，也不能声称任意 tie-breaking 自动给出普通梯度。一般神经网络还应注明本身不可微点的处理。
+
+数值检查：1000 个避开相等边界的五 critic 仿射例子中，公式与中心差分最大误差约 2.12×10⁻⁹；上述反例左右导数分别为 +0.5、-0.5。这支持修正后的局部公式，不支持原始全局定理。
+
+### T2 · MAJOR：参数端点和 ε 改变了定义
+
+**Claim/evidence：** 第 2 页定义 3.1 规定 τ∈(0,1)，第 3 页却直接使用 τ=0、1；式 (15) 分母加 ε，同时后文仍把输出视为精确 expectile。
+
+对有限非空样本：
+
+\[
+\arg\min_u\sum_iL_0(Z_i-u)=(-\infty,\min_iZ_i],\qquad
+\arg\min_u\sum_iL_1(Z_i-u)=[\max_iZ_i,\infty).
+\]
+
+因此端点 argmin 并不唯一。min/max 应定义为 τ→0⁺、τ→1⁻ 的连续扩展，并显式实现 min/max。
+
+内点有 Σw_i≥n min(τ,1−τ)>0，不存在理论上的除零。固定 ε 会把方程从 Σw_i(Z_i−u)=0 改成 Σw_i(Z_i−u)=εu，引入向零偏差；数值防护可以有，但必须与精确定理分开。
+
+**验收：** 使用有终止标准的求根器；报告一阶条件残差和容差。F(u)=Σw_i(u)(Z_i−u) 连续严格递减，可在 [min Z,max Z] 二分。IRLS 如继续使用，要给停止规则、最大迭代数和失败回退；本审查没有证明它发散，也不把缺少收敛论证写成已发生故障。
+
+### T3 · MAJOR：IQL 引理、极限对象和 convergence 定位需修正
+
+**Claim/evidence：** 第 1 页 Lemma 2.1 写严格小于；Theorem 2.2 右侧 Q 未定义为哪个固定点。第 2 页第 25–26 行写 convergence proof 缺少，但本文之后未给 value-iteration 收敛定理。
+
+常值随机变量的 expectile 对所有 τ 相等，所以单调性应为 ≤。IQL 原文 §4.4 的 Lemma 2 也使用 ≤；其 Q* 是数据支持受限的最优固定点，不是任意当前 Q，也不能直接等同无限制环境最优 Q*。连续动作应使用明确的支持条件和适当的 essential supremum/supremum；max 是否取得需要额外条件。[IQL 原文 §4.4](https://arxiv.org/pdf/2110.06169)
+
+**验收：** 分清经验 expectile 求解、精确 Bellman 迭代、带函数逼近的 critic 训练、actor-critic 联合训练四种收敛。本文推导的是第一类工具和局部梯度，没有证明后面三类。
+
+如果要补理论，可先固定策略、参数和采样分布，在有界函数空间利用 expectile 的单调性与平移等变性证明 1-Lipschitz，再证明固定嵌套备份算子的 γ-contraction。它不自动证明神经训练收敛、不保证固定点等于真实 Q、不证明改进策略单调提升。ExpectRL 已经分析过不同放置位置的 expectile Bellman contraction，不能把一般 contraction 性质包装成新发现。[ExpectRL 附录 A](https://arxiv.org/html/2406.04081v1)
+
+### T4 · MAJOR：lower expectile 不是校准后的真实价值下界
+
+**Claim/evidence：** 第 4 页第 62 行“τ_Q≤0.5 otherwise, overestimation bias”；第 3 页第 54 行又提出 online 可以 τ_Q>0.5。
+
+τ_Q<0.5 只保证相对该 ensemble 均值更低。如果 Q₁=Q₂=10，而真实 Q=0，那么任何内点 expectile 仍为 10。它无法消除共同偏差，也不能自动给出置信水平。相反，τ_Q>0.5 也不意味着一定超过真实值。
+
+**验收：** 把结论写成相对 ensemble 的悲观/乐观调节；如要称 lower confidence bound，须给概率模型、覆盖率与校准证据。分别测量聚合值偏差、成员误差相关性和过估概率，不能只报告 ensemble 方差。
+
+### T5 · MAJOR：最终要运行的算法仍不唯一
+
+**Claim/evidence：** 第 3 页 §4 双 expectile；第 4 页 §5.1 改为动作期望；§5.2 引入 D_i。式 (28)、(31) 用 π(·|s) 采样，却评价 Q(s′,a)。第 1 页说 online，actor 中仍出现未定义的 BC_Loss。
+
+**验收：** 确定一个主算法，把其他版本列为消融。下一状态动作一般应写 a′~π(·|s′)；明确终止 mask、time-limit truncation、目标网络和 stop-gradient、目标聚合是否包含自身、正则项 R 的具体形式与缩放、BC 的数据来源和权重。若确实要用 π(·|s)，必须解释这是有意改变算子，而非笔误。是否保留 BC 是研究选择，online 使用 BC 并非天然错误。
+
+## Reviewer 2：创新边界与最接近工作
+
+总体判断：有研究价值的候选点是“数据分配 × target 耦合 × 聚合”的作用机制。仅将 min 改为 expectile 不足以确立强贡献。该问题主要吸引连续控制和不确定性估计读者；更广泛重要性需要可复用机制或有说服力的效率证据。理论 T4 和实验 E1 的缺口同样削弱创新论证。
+
+### N1 · MAJOR：组成模块都有近邻，需要明确差异轴
+
+**Claim/evidence：** 第 3 页式 (16)–(24)、表 1；第 4 页 §5.2；第 6 页只有四条参考文献，SAC-N/EDAC 等仅列名称。
+
+截至审查日期，本次定向检索得到以下必须讨论的工作；这不是穷尽式查新，也不能证明不存在同构方法。
+
+| 工作 | 已有内容与 EQL 的比较轴 |
+|---|---|
+| [IQL，ICLR 2022](https://arxiv.org/abs/2110.06169) | 主要沿数据动作分布取 upper expectile；本文沿 critic 索引取 expectile 是不同随机轴，不能仅用“都叫 expectile”判为重复。原文也采用双 Q 最小值，因而“本文首次显式处理估值不确定性”的对比不成立。 |
+| [SAC-N / EDAC，NeurIPS 2021](https://arxiv.org/abs/2110.01548) | 已使用 Q ensemble、悲观聚合与梯度多样性正则。需解释 expectile 比 min/多样性正则额外解决什么。 |
+| [MSG，NeurIPS 2022](https://proceedings.neurips.cc/paper_files/paper/2022/file/7423902b5534e2b267438c85444a54b1-Paper-Conference.pdf) | 直接区分独立 target 与共享悲观 target。本文“分开数据但允许跨 critic target”必须作为不同设计比较，不能继承其独立 target 结论。 |
+| [Bootstrapped DQN，NeurIPS 2016](https://proceedings.neurips.cc/paper_files/paper/2016/file/8d8818c8e140c64c743113f563cf750f-Paper.pdf) | 子样本训练和 episode 级 mask 已有先例；老师的固定复制次数、均衡分袋、单 actor 更新可能构成实现差异，但 trajectory bagging 本身不是空白。 |
+| [REDQ，ICLR 2021](https://arxiv.org/abs/2101.05982) | 在线 ensemble、随机子集 target 和高 UTD 是关键比较背景；必须控制更新预算，不能把多更新收益归给聚合器。 |
+| [ExpectRL，2024](https://arxiv.org/abs/2406.04081) | 将 expectile 放在转移/TD 目标相关的随机性上，引入悲观性；本文把环境随机性仍作普通期望、把 expectile 放在 ensemble 轴，是应说明的区别。 |
+| [ENQ，2026 预印本](https://arxiv.org/abs/2608.02034) | 研究多步 TD expectile 与收缩性质，不是本文的一步 ensemble 聚合。若后续主张多步收益传播，需要进一步正面对照；目前不能因名称接近判为直接重复。 |
+
+**验收：** 画出每个算子的随机轴：动作 a、环境 r/s′、数据袋 D_i、网络成员 i。用这些轴定位差异，避免泛称“更乐观/更保守”。第 3 页第 51–53 行把 IQL 的 τ 解释成 τ_a 与 τ_Q 的隐式折中，目前只有直觉，没有等价推导。
+
+### N2 · MAJOR：两个 critic 的 expectile 与 mean–std 完全等价
+
+**Claim/evidence：** 第 3 页式 (20)–(24) 与第 4 页 §5.2 的聚合器；白板示例 num_critics=2。
+
+设 q_lo≤q_hi，等权的两个样本有
+
+\[
+e_\tau(q_1,q_2)=(1-\tau)q_{lo}+\tau q_{hi}
+=\mu+(2\tau-1)\sigma,
+\]
+
+其中 μ=(q₁+q₂)/2，σ=|q₁−q₂|/2 为除以 n 的 ensemble 总体标准差。τ≤1/2 时就是 μ−βσ，β=1−2τ。
+
+**影响：** n=2 时，等价发生在聚合值及可微位置的梯度上。仅替换名称没有产生新的聚合机制；但不能据此把整套 EQL 算法等同 MSG，因为数据分配、target 和 actor 损失仍可能不同。
+
+**验收：** n=2 的 matched mean–std 应作为实现一致性检查；真正考验聚合差异要有 n>2、非对称误差/离群值，并与调参预算相同的 mean–std、min、mean 比较。1000 组随机两样本数值验证中，上式最大误差 1.78×10⁻¹⁵。
+
+### N3 · MAJOR：分袋并不自动建立 ensemble 独立性
+
+**Claim/evidence：** 第 4 页第 58–59 行引出独立训练，式 (31) 却没有清楚区分成员自己的 target 和 ensemble 聚合；白板明确允许 target 使用其他 Q_j。
+
+训练数据不同、参数初始化不同、bootstrap target 独立是三个不同条件。共享 actor、相同环境、数据复制和跨 critic target 仍能引入相关性。尤其给所有成员同一个 target 时，分袋可能提供短期多样性，也可能在反复 bootstrap 中被削弱；目前没有证据确定是哪种。
+
+**验收：** 必做“共享数据/轨迹分袋 × 共享 target/自身 target”的 2×2 比较。若使用 leave-one-out target，再独立增加该变体。不要把“分开采样 minibatch”称为统计独立，更不能照搬 MSG 的特定理论保证。
+
+## Reviewer 3：实验充分性与老师白板的可执行性
+
+总体判断：现有材料没有足以评价算法效果的实验。白板有清楚的下一步工程方向，但需要定义数据单位和公平预算。潜在应用是连续控制的数据效率与稳定性，科学意义必须由误差机制与任务表现共同支撑。T4/N3 是实验最应优先检验的风险；尚无跨任务或跨领域泛化证据。
+
+### E1 · CRITICAL（针对投稿成熟度）：没有结果证据
+
+**Claim/evidence：** 第 3 页第 51 行“I suggest”、第 55 行“I conjecture”；第 4 页第 61 行“Now we need implement”。全文没有实验章节。上述文字本身也是研究计划语气。
+
+因此无法判断是否超过 baseline、是否稳定、是否降低过估、τ_a 是否最终不重要、bagging 是否有效。它们应保留为假设，不能改写为已证实结论。缺失实验不等于算法已经失败。
+
+**验收：** 每个主张至少有一个能将它证伪的实验；先机制实验，再跑主 benchmark。当前目录没有训练代码，本次没有启动训练，也没有用数学单元检查充当 RL 实验。
+
+### E2 · MAJOR：白板的数据组织仍有关键歧义
+
+图片可确认的内容：batch 为 num_envs×num_steps；buffer 为 num_critics×buffer_size；复制 num_duplicates 次后分给各袋；同一 trajectory 放同袋；critic i 只学 B_i，target 可用其他 critic；各袋独立采样；总 batch 为 num_critics×per_bag_batch_size；actor 在全部数据上学习，目标不变。
+
+这些是老师的直接文字。以下是实施前需要补齐的判断，不是声称老师已经决定：
+
+1. **trajectory 到底指完整 episode 还是固定长度 rollout fragment？** 若为完整 episode，向量环境跨 batch 的未结束 episode 要保留同一分袋 mask；不同 episode 长度意味着不能强求每轮精确等量 transitions。
+2. **图片的整除条件不够。** E×d×T 能被 n 整除，仅保证 transition 数可整分；若整条长度 T 的轨迹不能拆，应有 E×d 能被 n 整除才能等轨迹数分配。例如 E=1,d=1,T=2,n=2 满足原式，但一条两步轨迹不能无拆分地各放一步进两个袋。
+3. **复制的语义。** 建议每条轨迹选择 d 个不同成员，每个成员至多存一份，1≤d≤n；同袋重复不能带来额外独立信息。均衡固定 d 分配不等于经典有放回 bootstrap，应准确命名并以随机 bootstrap mask 为对照。
+4. **环境编号不要固定绑定 critic。** 否则环境 seed、任务或 reset 分布可能成为额外混杂；应按轨迹随机分配并记录。
+5. **replace() 的生命周期不明确。** 若每轮覆盖 buffer，就是近期 rollout 训练；若保持 replay，应定义环形容量、淘汰和 episode 完整性。这会改变 off-policy 数据分布。
+6. **actor 全数据的含义。** 原始数据均匀采样与复制后袋并集均匀采样并非总是等价，尤其不同袋淘汰后；建议 actor 从独立的全局原始 replay 取样。
+
+**验收：** 用轨迹 ID 记录袋成员与 episode 边界，核对重复数、分布、淘汰和 critic loss mask；确认每个 critic 的梯度只来自其袋中的监督样本。target 的跨网络依赖应单独记录。
+
+### E3 · MAJOR：若不控制样本量与计算量，bagging 收益无法归因
+
+**Claim/evidence：** 白板 `batch_size = num_critics * per_bag_batch_size`，以及 §5.2 “We need ensemble diversity”。
+
+若总 batch 固定 B，每个 critic 只获得 B/n 样本；若每 critic 保持 B，总处理量随 n 增大。分袋还会改变每个 critic 可见数据量和覆盖度。两者都会影响回报，不能只对比最终均值。
+
+**验收：** 同时报参数量、环境交互数、UTD、每成员样本数、总 gradient steps、总 critic 样本处理量、wall-clock、峰值显存和 replay 物理/逻辑容量。至少给等交互预算与等计算预算两种视角。误差相关性应在同一批查询点计算，优先比较 Q_i−Q_ref 的相关性，避免真实 Q 的共同变化淹没估计误差。
+
+## Cross-review synthesis：可以怎样继续做
+
+### 共识与分歧
+
+三个视角均认可“动作选择与 critic 不确定性使用不同聚合轴”有清楚的研究动机。Reviewer 1/2 的共识是 T4：悲观聚合不等于真实下界；Reviewer 2/3 的共识是 N3：分袋效果与 target 耦合尚未区分。Reviewer 1 认为梯度错误可局部修复；Reviewer 2 更担心 n=2 的等价性使贡献变弱；Reviewer 3 更担心有限数据分袋降低覆盖率。它们不是互相排斥的判断。
+
+**优先级：先修正定理与算法定义，再把老师的分袋机制做成可开关的变量，最后检验它是否真的改善误差和回报。** 当前不宜投入大规模 sweep 或先润色成完整投稿稿。
+
+### 建议冻结的最小实验定义
+
+以下是本审查建议，不是已完成的算法。先采用 §5.2 的动作期望版本，暂不叠加动作 max，让研究只改变分袋、target 与聚合。
+
+记 A_τ(Q(s,a))=e_τ({Q_j(s,a)}_{j=1}^n)，terminal mask 为 d_t：
+
+\[
+L_i=\mathbb E_{D_i}(Q_i(s,a)-\operatorname{sg}(y_i))^2.
+\]
+
+共享 target 版本：
+
+\[
+y_i^{shared}=r+\gamma(1-d_t)\mathbb E_{a'\sim\pi(\cdot|s')}A_{\tau_Q}(\bar Q(s',a')).
+\]
+
+自身 target 对照：
+
+\[
+y_i^{own}=r+\gamma(1-d_t)\mathbb E_{a'\sim\pi(\cdot|s')}\bar Q_i(s',a').
+\]
+
+actor 在同一个全局数据分布上优化相同的 BC/entropy 配置与 −A_τ(Q(s,a))。不能在其中一组额外加 entropy、改 BC 或改变 reward normalization。own-target 仅减少 critic bootstrap 耦合，并不宣称共享 actor 下所有网络完全统计独立。若保留 R，第一轮固定 R=0，再单独做正则消融。
+
+### 第一阶段：低成本但能决定方向的实验
+
+| 实验 | 必须回答的问题 | 证据与停止条件 |
+|---|---|---|
+| 求解器与梯度检查 | forward/backward 是否实现了同一个聚合器？ | 常值、τ=0.5、端点极限、ties、有限差分、平移等变性和 n=2 mean–std 一致性；本次只验证了部分数学例子，未测试你的实现。 |
+| 可精确求 Q^π 的小型 MDP，固定策略 | 分袋改善的是误差还是只增大分歧？ | 记录 bias、RMSE、过估比例、成员误差相关性；同时运行下面的 2×2 设计。 |
+| 2×2：全数据/分袋 × shared/own target | 收益来自数据分配还是 target 结构？ | 同网络、同 critic 数与相同训练预算；若 bagging 无增益，不能把它写成贡献。 |
+| n=2 与 n>2 聚合比较 | expectile 是否超出已有 mean–std 行为？ | mean/min/mean–std/expectile，同调参预算；n=2 匹配 β 后应一致。 |
+| 数据覆盖与袋重叠 | diversity 是否以损害可学习性为代价？ | 固定总原始数据，改变 d/n，统计每袋状态动作覆盖和误差；含稀有高回报轨迹场景。 |
+
+固定策略下，一个状态、两个等概率动作、奖励分别 0/1、自循环时，动作 expectile 的值满足 V=τ_a+γV，即 V=τ_a/(1−γ)。这说明 τ_a 可以改变固定点。它不直接驳倒“actor 训练后可能影响变小”的第 55 行猜想，但足以要求把该猜想作为实验问题，而非先验删掉 τ_a。
+
+### 第二阶段：有机制证据后再扩大 benchmark
+
+- **online 为主：** 与 SAC/TD3 系列、REDQ 和同骨架 ensemble baseline 比较；选择多个难度、动力学或奖励结构不同的连续控制任务，保留严格相同的数据收集规则。由于草稿明写 online，这是默认主线。
+- **若改为 offline：** 另设离线数据协议，比较 IQL、SAC-N/EDAC、MSG，覆盖不同数据质量与稀疏奖励；不要混在 online 主表里。先核对 baseline 的适用设置，而非无条件搬进同一训练循环。
+- **消融：** 先主效应再交互，不全笛卡尔积暴力搜索。候选 n∈{2,5,10}；τ_Q∈{0.1,0.25,0.5}，探索 >0.5 作为单独假设；m=1 时 τ_a 无效，只有 m>1 才比较动作 mean/expectile/max。记录 d/n、样本容量和 UTD。
+- **统计：** 小试可用 3 seeds 定位明显问题，正式比较建议至少 5 个独立训练种子并按方差增加；这不是保证显著性的魔法数字。评估 episodes 是同一个训练 seed 内的重复测量，不能当成独立训练样本。
+- **报告：** 完整曲线、固定时刻回报、学习曲线面积、seed 级数据及置信区间；跨任务可报告标准化 IQM，明确归一化方式。不能挑 best seed 或每组各自最优时刻。超参数选择与最终评估分开。
+
+继续投入的条件是：匹配预算后，分袋或 n>2 expectile 至少有一个带来稳定收益，并有误差机制证据。若仅特定 τ_Q/seed 有效、收益全部来自额外更新、或低相关性伴随更大系统偏差，应收缩主张或调整方向。负结果也可以帮助确定该放弃哪个模块。
+
+### 可以保留与暂时不能声称的内容
+
+可保留：双随机轴的设计动机；内点经验 expectile 的一阶条件；加上非相等条件后的局部梯度公式；白板作为数据分配方案。
+
+不能声称：已证明完整算法收敛；处处可微；τ_Q≤0.5 保证真实价值下界；bagging 自动实现 MSG 意义上的独立 target；τ_a 最终无关；已有任务性能优势；该组合首次出现。这些都需要修订、证据或更完整查新。
+
+写作附注：第 1 页摘要与引言为空，第 3–4 页两个同名 §4/§5 尚未合并，表 1 缺定义和引用；Double Q 的选择/评价解耦不能简单用两个 Q 取 min 代表，应注明具体指哪个算法。全文扫描未发现所查技能列举的夸张词或 em dash，本次重点不是文风。没有 LaTeX 源码，无法审计宏、交叉引用命令和最终格式。
+
+## 附：验证产物
+
+- `verify_math.py`：标准库实现的 expectile 二分及反例/局部梯度检查。
+- `math_checks.json`：本次实际运行结果。
+- 验证范围仅为标量数学与文本扫描，不包含 RL 训练，也不证明新方法有效。

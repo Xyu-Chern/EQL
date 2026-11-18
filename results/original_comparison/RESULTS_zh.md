@@ -1,0 +1,48 @@
+# 原配置三方法对比结果
+
+目标方法：EQL + replay buffer + bagging。以用户确认的 eql.py 为准，未修改原 eql.py/sac.py。
+三个方法统一 10 环境、每环境每次 1 步、10 critics、100000 次交互、9796 次更新、4 个相同训练 keys。
+学习率 3e-4、gamma=.98、Polyak=.99、batch=256、fill_buffer=2048、buffer_size=131072；EQL tau_a=.7/tau_Q=.3。
+SAC 是用户 sac.py 的 10-critic min-SAC，不能标成标准双 critic SAC。
+bagging 使用一步轨迹片段、每条数据复制到两个不同袋；每个 critic 只从自己的袋采样，target 使用完整 ensemble，actor 不变。
+每袋容量保留 131072；并非完整 episode 分袋。具体配置来源和实现边界见 ../../ORIGINAL_COMPARISON.md。
+
+每个 seed 最终评估 128 个随机策略 episode；下表 ± 为四个训练 seeds 的样本标准差。固定最终 checkpoint，不挑最好结果。
+
+| 环境 | 方法 | 最终回报均值 ± SD | 四个 seed 的最终回报 |
+|---|---|---:|---|
+| Pendulum-v1 | SAC | -1076.22 ± 126.42 | -1073.56, -1066.89, -927.65, -1236.78 |
+| Pendulum-v1 | EQL | -679.80 ± 58.15 | -698.76, -734.45, -597.77, -688.21 |
+| Pendulum-v1 | EQL_bagging | -687.07 ± 82.10 | -667.12, -694.89, -593.91, -792.34 |
+| Reacher-misc | SAC | 22.58 ± 2.28 | 23.97, 24.35, 22.66, 19.34 |
+| Reacher-misc | EQL | 18.25 ± 1.40 | 19.52, 18.67, 18.53, 16.26 |
+| Reacher-misc | EQL_bagging | 18.55 ± 0.70 | 19.13, 18.88, 17.54, 18.63 |
+
+## 配对差异
+
+以下是按相同训练 key 配对的均值差和探索性 t 区间（df=3）；只有四个 seeds，未校正多重比较。
+
+| 环境 | 比较 | 均值差 | 探索性 95% 区间 |
+|---|---|---:|---|
+| Pendulum-v1 | EQL - SAC | 396.42 | [231.73, 561.11] |
+| Pendulum-v1 | EQL_bagging - EQL | -7.27 | [-112.87, 98.33] |
+| Pendulum-v1 | EQL_bagging - SAC | 389.15 | [313.84, 464.46] |
+| Reacher-misc | EQL - SAC | -4.33 | [-6.04, -2.63] |
+| Reacher-misc | EQL_bagging - EQL | 0.30 | [-2.04, 2.64] |
+| Reacher-misc | EQL_bagging - SAC | -4.03 | [-7.59, -0.48] |
+
+## 本轮观察
+
+Pendulum：两个 EQL 版本在四个配对 seeds 上均优于 SAC。bagging 相对原 EQL 三次提升、一次下降，最终均值低 7.27；不能据此声称稳定提升。
+Reacher：SAC 在四个配对 seeds 上均优于两个 EQL 版本。bagging 相对原 EQL 两次提升、两次下降，最终均值高 0.30；改善幅度不足以支持稳定收益结论。
+本轮支持“分袋版已接入原 EQL 并完成同预算对比”，尚不支持“bagging 稳定改善原 EQL”。
+10 环境、每次采集后更新 1 次，是用户确认配置；相同总交互数下，更新次数约为原单环境设置的十分之一，不能直接拿本表和旧单环境图比较。
+
+## 核验与产物
+
+24 runs; 100000 transitions and 9796 updates each; finite raw 128-episode returns; identical initial returns and parameters; source hashes match
+整卡显存采样峰值 3897 MiB，最高温度 86°C（含桌面，5 秒采样）。
+24 次运行内部耗时合计 707.5 秒，包括各 run 的编译与评估，不包括安装/测试/外层进程启动。
+各环境目录含原始 JSON/JSONL、episode 级 NPZ、最终参数、manifest 和源码 SHA256；summary.csv/summary.json 为汇总。
+本轮保留原代码的 warmup policy、done/autoreset 语义和 IRLS 实现，未混用上一轮算法修正。
+结果仅覆盖这两个 Gymnax 环境及当前预算，不能直接推广到 MuJoCo Reacher 或完整 episode bagging。

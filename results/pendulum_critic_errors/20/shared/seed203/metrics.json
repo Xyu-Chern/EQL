@@ -1,0 +1,15 @@
+{
+  "correlation": 0.9915426820898323,
+  "raw_correlation": 0.9915428181676825,
+  "same_sign_fraction": 0.987280701754386,
+  "mean_bias": -26.855052651427428,
+  "critic_rmse": 36.68307808724751,
+  "ensemble_mean_rmse": 36.61229277849766,
+  "prediction_spread": 2.085969073234307,
+  "median_mc_se": 0.019412878900766373,
+  "method": "shared",
+  "critics": 20,
+  "seed": 203,
+  "alpha": 0.06741249561309814,
+  "score": -164.19512939453125
+}

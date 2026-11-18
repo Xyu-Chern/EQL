@@ -1,0 +1,15 @@
+{
+  "correlation": 0.9750397644478342,
+  "raw_correlation": 0.9750416072118487,
+  "same_sign_fraction": 0.993765664160401,
+  "mean_bias": -46.71921257842277,
+  "critic_rmse": 51.77697778418906,
+  "ensemble_mean_rmse": 51.65149202013257,
+  "prediction_spread": 3.361558302878813,
+  "median_mc_se": 0.03324054926633835,
+  "method": "episode",
+  "critics": 20,
+  "seed": 202,
+  "alpha": 0.14324289560317993,
+  "score": -142.2724609375
+}

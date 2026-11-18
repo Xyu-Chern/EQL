@@ -1,0 +1,36 @@
+{
+  "scope": "Scalar math checks only; no manuscript implementation or RL performance tested.",
+  "theorem_6_1_counterexample": {
+    "Q1": "a",
+    "Q2": "-a",
+    "tau": 0.25,
+    "exact_expectile": "(2*tau-1)*abs(a)",
+    "right_derivative": -0.5000000000000001,
+    "left_derivative": 0.5000000000000001,
+    "draft_formula_at_zero": 0.0
+  },
+  "two_critic_mean_sd_identity_max_error_1000_cases": 1.7763568394002505e-15,
+  "non_tie_gradient_cases": 1000,
+  "non_tie_gradient_max_error": 2.1236816749592435e-09,
+  "constant_ensemble": {
+    "values": [
+      10,
+      10
+    ],
+    "tau": 0.25,
+    "expectile": 10.0,
+    "interpretation": "If truth is 0, lower expectile still overestimates by 10."
+  },
+  "trajectory_balance_counterexample": {
+    "num_envs": 1,
+    "num_duplicates": 1,
+    "num_steps": 2,
+    "num_critics": 2,
+    "transitions_per_bag_formula": 1,
+    "issue": "One indivisible two-step trajectory cannot fill two bags equally."
+  },
+  "full_text_style_scan": {
+    "em_dash_count": 0,
+    "term_matches": {}
+  }
+}

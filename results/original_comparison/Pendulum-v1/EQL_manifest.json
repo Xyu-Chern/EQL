@@ -1,0 +1,38 @@
+{
+  "method": "EQL",
+  "env": "Pendulum-v1",
+  "config": {
+    "eval_freq": 4096,
+    "skip_initial_evaluation": false,
+    "total_timesteps": 100000,
+    "learning_rate": 0.0003,
+    "gamma": 0.98,
+    "max_grad_norm": Infinity,
+    "target_update_freq": 1,
+    "polyak": 0.99,
+    "normalize_rewards": false,
+    "reward_normalization_discount": 0.99,
+    "normalize_observations": false,
+    "num_envs": 10,
+    "buffer_size": 131072,
+    "fill_buffer": 2048,
+    "batch_size": 256,
+    "num_critics": 10,
+    "num_epochs": 1,
+    "target_entropy_ratio": 0.98,
+    "tau_a": 0.7,
+    "tau_Q": 0.3,
+    "num_iters": 10
+  },
+  "source_sha256": {
+    "eql.py": "82289331e5d723eb06c97811a01b1917068a98652fcdaf3102877553e3019146",
+    "sac.py": "d7aa94c57b991c7fa399f07da8f50f5eb71a5b3ca80ee10c7c1274bac9a20ed4",
+    "original_bag_eql.py": "a6ab25bd02bf43d8cb57bd336027180df3de3cc9e79cd8de77a014fe8d81f3a1",
+    "bagging_buffer.py": "c665025e95ce7b0deabfa28a945fb423f648dcedb3812ba434a549368e8dd8ca",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde"
+  },
+  "training_keys": "jax.random.split(jax.random.PRNGKey(0),4)",
+  "evaluation": "128 stochastic episodes, independent common evaluation keys",
+  "bagging": "num_duplicates=2; per-bag capacity=original buffer_size; per-critic batch=256; one-step fragments",
+  "original_semantics": "original IRLS, policy warmup, done masking, Polyak, alpha and update order retained"
+}

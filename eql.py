@@ -10,6 +10,15 @@ import chex
 @partial(jax.jit, static_argnames=('axis', 'num_iters'))
 def compute_expectile_on_axis(data, tau, axis, num_iters=10):
     """E^tau(x) = argmin_y E[ rho_tau(x - y) ] where rho_tau(u) = |tau - 1_{u < 0}| * u^2"""
+    # The continuous extension at tau=0 is min, including SAC's gradient at ties.
+    return jax.lax.cond(
+        tau == 0,
+        lambda: jnp.min(data, axis=axis),
+        lambda: _irls_expectile(data, tau, axis, num_iters),
+    )
+
+
+def _irls_expectile(data, tau, axis, num_iters):
     y = jnp.mean(data, axis=axis, keepdims=True)
     tau = jnp.clip(tau, 0.0001, 0.99999)
     def body_fn(i, current_y):

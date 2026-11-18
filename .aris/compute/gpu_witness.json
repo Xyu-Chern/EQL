@@ -1,0 +1,9 @@
+{
+  "jax": "0.4.38",
+  "devices": [
+    "cuda:0"
+  ],
+  "array_device": "{CudaDevice(id=0)}",
+  "trace": 16199.7060546875,
+  "finite": true
+}

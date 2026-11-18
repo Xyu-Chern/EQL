@@ -1,0 +1,1 @@
+{'num_envs': 10, 'num_critics': 50, 'total_timesteps': 100000, 'learning_rate': 0.001, 'gamma': 0.98, 'env': 'Pendulum-v1', 'tau_a': 0.7, 'tau_Q': 0.3}

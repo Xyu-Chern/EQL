@@ -1,0 +1,44 @@
+[
+  {
+    "method": "SAC",
+    "critics": 20,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2592,
+    "whole_gpu_peak_sample_MiB": 2907
+  },
+  {
+    "method": "EQL",
+    "critics": 20,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2594,
+    "whole_gpu_peak_sample_MiB": 3121
+  },
+  {
+    "method": "EQL_bagging",
+    "critics": 20,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2721,
+    "whole_gpu_peak_sample_MiB": 3129
+  },
+  {
+    "method": "SAC",
+    "critics": 50,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2690,
+    "whole_gpu_peak_sample_MiB": 2973
+  },
+  {
+    "method": "EQL",
+    "critics": 50,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2665,
+    "whole_gpu_peak_sample_MiB": 2970
+  },
+  {
+    "method": "EQL_bagging",
+    "critics": 50,
+    "exit_code": 0,
+    "whole_gpu_before_MiB": 2660,
+    "whole_gpu_peak_sample_MiB": 3893
+  }
+]

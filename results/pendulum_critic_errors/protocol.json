@@ -1,0 +1,39 @@
+{
+  "common": {
+    "num_envs": 10,
+    "num_critics": 10,
+    "total_timesteps": 100000,
+    "learning_rate": 0.001,
+    "gamma": 0.98
+  },
+  "tau_Q": 0.1,
+  "tau_a": 0.7,
+  "ensemble": [
+    10,
+    20,
+    50
+  ],
+  "seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "bag_copies": [
+    2,
+    4,
+    10
+  ],
+  "coverage": 0.2,
+  "mc_reps": 256,
+  "mc_block": 16,
+  "probe": "16 angles x 7 velocities x 3 actions, t=0; 200-step soft Q including entropy from next action onward",
+  "source_sha256": {
+    "critic_error_study.py": "ea3fac2cf969fa514ffe8cd4f0a4077a5ea72b345085eb37c416bdf4304e824e",
+    "eql.py": "1b186e9a767bcb6d2ce60541fa8eb9ecc53860cd2b027fee3ed055001d975a57",
+    "bagging_buffer.py": "c665025e95ce7b0deabfa28a945fb423f648dcedb3812ba434a549368e8dd8ca",
+    "original_bag_eql.py": "a6ab25bd02bf43d8cb57bd336027180df3de3cc9e79cd8de77a014fe8d81f3a1",
+    "pendulum_episode_bags.py": "a85675c29cd529434e83376adfe586038352b16e6c0d73b7753a08202a50a1f1",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde"
+  }
+}
