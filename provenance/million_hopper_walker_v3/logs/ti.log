@@ -1,0 +1,192 @@
+engine 210 0.29.1
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 gymnasium.envs.mujoco.hopper_v3:HopperEnv (11,) 0.9947563881586902
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+Walker2d-v3 gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv (17,) 1.0031318085797971
+NVIDIA GeForce RTX 2080 Ti, 11264 MiB
+START Walker2d-v3 EQL 2026-11-18T16:47:35-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 EQL 201 NVIDIA GeForce RTX 2080 Ti
+Walker2d-v3 EQL 201 0 -13.69
+Walker2d-v3 EQL 201 50000 294.03
+Walker2d-v3 EQL 201 100000 485.96
+Walker2d-v3 EQL 201 150000 380.37
+Walker2d-v3 EQL 201 200000 444.26
+Walker2d-v3 EQL 201 250000 430.25
+Walker2d-v3 EQL 201 300000 467.03
+Walker2d-v3 EQL 201 350000 467.0
+Walker2d-v3 EQL 201 400000 436.52
+Walker2d-v3 EQL 201 450000 319.35
+Walker2d-v3 EQL 201 500000 297.29
+Walker2d-v3 EQL 201 550000 435.01
+Walker2d-v3 EQL 201 600000 279.49
+Walker2d-v3 EQL 201 650000 133.96
+Walker2d-v3 EQL 201 700000 167.69
+Walker2d-v3 EQL 201 750000 148.41
+Walker2d-v3 EQL 201 800000 172.81
+Walker2d-v3 EQL 201 850000 90.19
+Walker2d-v3 EQL 201 900000 78.24
+Walker2d-v3 EQL 201 950000 80.34
+Walker2d-v3 EQL 201 1000000 538.68
+Walker2d-v3 EQL 202 NVIDIA GeForce RTX 2080 Ti
+Walker2d-v3 EQL 202 0 -3.84
+Walker2d-v3 EQL 202 50000 369.46
+Walker2d-v3 EQL 202 100000 419.03
+Walker2d-v3 EQL 202 150000 402.53
+Walker2d-v3 EQL 202 200000 648.09
+Walker2d-v3 EQL 202 250000 403.81
+Walker2d-v3 EQL 202 300000 529.0
+Walker2d-v3 EQL 202 350000 556.28
+Walker2d-v3 EQL 202 400000 185.79
+Walker2d-v3 EQL 202 450000 520.74
+Walker2d-v3 EQL 202 500000 470.27
+Walker2d-v3 EQL 202 550000 423.48
+Walker2d-v3 EQL 202 600000 512.11
+Walker2d-v3 EQL 202 650000 521.43
+Walker2d-v3 EQL 202 700000 636.3
+Walker2d-v3 EQL 202 750000 550.51
+Walker2d-v3 EQL 202 800000 516.16
+Walker2d-v3 EQL 202 850000 663.43
+Walker2d-v3 EQL 202 900000 633.2
+Walker2d-v3 EQL 202 950000 1138.55
+Walker2d-v3 EQL 202 1000000 703.35
+Walker2d-v3 EQL 203 NVIDIA GeForce RTX 2080 Ti
+Walker2d-v3 EQL 203 0 -5.8
+Walker2d-v3 EQL 203 50000 239.53
+Walker2d-v3 EQL 203 100000 493.62
+Walker2d-v3 EQL 203 150000 238.45
+Walker2d-v3 EQL 203 200000 313.19
+Walker2d-v3 EQL 203 250000 361.65
+Walker2d-v3 EQL 203 300000 411.21
+Walker2d-v3 EQL 203 350000 410.49
+Walker2d-v3 EQL 203 400000 343.2
+Walker2d-v3 EQL 203 450000 215.62
+Walker2d-v3 EQL 203 500000 306.33
+Walker2d-v3 EQL 203 550000 416.95
+Walker2d-v3 EQL 203 600000 417.96
+Walker2d-v3 EQL 203 650000 401.17
+Walker2d-v3 EQL 203 700000 366.45
+Walker2d-v3 EQL 203 750000 418.71
+Walker2d-v3 EQL 203 800000 397.08
+Walker2d-v3 EQL 203 850000 353.32
+Walker2d-v3 EQL 203 900000 316.37
+Walker2d-v3 EQL 203 950000 358.06
+Walker2d-v3 EQL 203 1000000 314.78
+Walker2d-v3 EQL 204 NVIDIA GeForce RTX 2080 Ti
+Walker2d-v3 EQL 204 0 -5.12
+Walker2d-v3 EQL 204 50000 268.06
+Walker2d-v3 EQL 204 100000 276.31
+Walker2d-v3 EQL 204 150000 344.85
+Walker2d-v3 EQL 204 200000 500.87
+Walker2d-v3 EQL 204 250000 331.34
+Walker2d-v3 EQL 204 300000 347.2
+Walker2d-v3 EQL 204 350000 404.99
+Walker2d-v3 EQL 204 400000 545.49
+Walker2d-v3 EQL 204 450000 710.62
+Walker2d-v3 EQL 204 500000 602.19
+Walker2d-v3 EQL 204 550000 556.36
+Walker2d-v3 EQL 204 600000 599.51
+Walker2d-v3 EQL 204 650000 327.66
+Walker2d-v3 EQL 204 700000 689.67
+Walker2d-v3 EQL 204 750000 651.91
+Walker2d-v3 EQL 204 800000 477.28
+Walker2d-v3 EQL 204 850000 690.86
+Walker2d-v3 EQL 204 900000 595.3
+Walker2d-v3 EQL 204 950000 543.86
+Walker2d-v3 EQL 204 1000000 716.85
+START Hopper-v3 EQL 2026-11-18T17:25:31-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 201 NVIDIA GeForce RTX 2080 Ti
+Hopper-v3 EQL 201 0 58.65
+Hopper-v3 EQL 201 50000 201.92
+Hopper-v3 EQL 201 100000 292.02
+Hopper-v3 EQL 201 150000 267.63
+Hopper-v3 EQL 201 200000 345.18
+Hopper-v3 EQL 201 250000 562.8
+Hopper-v3 EQL 201 300000 375.15
+Hopper-v3 EQL 201 350000 611.37
+Hopper-v3 EQL 201 400000 766.47
+Hopper-v3 EQL 201 450000 791.01
+Hopper-v3 EQL 201 500000 749.81
+Hopper-v3 EQL 201 550000 726.64
+Hopper-v3 EQL 201 600000 755.0
+Hopper-v3 EQL 201 650000 818.83
+Hopper-v3 EQL 201 700000 665.2
+Hopper-v3 EQL 201 750000 1335.87
+Hopper-v3 EQL 201 800000 1341.76
+Hopper-v3 EQL 201 850000 762.09
+Hopper-v3 EQL 201 900000 745.88
+Hopper-v3 EQL 201 950000 742.21
+Hopper-v3 EQL 201 1000000 825.88
+Hopper-v3 EQL 202 NVIDIA GeForce RTX 2080 Ti
+Hopper-v3 EQL 202 0 7.36
+Hopper-v3 EQL 202 50000 183.15
+Hopper-v3 EQL 202 100000 334.29
+Hopper-v3 EQL 202 150000 367.86
+Hopper-v3 EQL 202 200000 480.77
+Hopper-v3 EQL 202 250000 455.44
+Hopper-v3 EQL 202 300000 533.72
+Hopper-v3 EQL 202 350000 506.76
+Hopper-v3 EQL 202 400000 501.27
+Hopper-v3 EQL 202 450000 513.45
+Hopper-v3 EQL 202 500000 510.83
+Hopper-v3 EQL 202 550000 532.87
+Hopper-v3 EQL 202 600000 487.45
+Hopper-v3 EQL 202 650000 489.68
+Hopper-v3 EQL 202 700000 489.47
+Hopper-v3 EQL 202 750000 505.07
+Hopper-v3 EQL 202 800000 482.35
+Hopper-v3 EQL 202 850000 481.05
+Hopper-v3 EQL 202 900000 444.68
+Hopper-v3 EQL 202 950000 530.93
+Hopper-v3 EQL 202 1000000 531.34
+Hopper-v3 EQL 203 NVIDIA GeForce RTX 2080 Ti
+Hopper-v3 EQL 203 0 13.59
+Hopper-v3 EQL 203 50000 219.5
+Hopper-v3 EQL 203 100000 390.51
+Hopper-v3 EQL 203 150000 399.02
+Hopper-v3 EQL 203 200000 396.95
+Hopper-v3 EQL 203 250000 366.17
+Hopper-v3 EQL 203 300000 535.85
+Hopper-v3 EQL 203 350000 379.18
+Hopper-v3 EQL 203 400000 423.01
+Hopper-v3 EQL 203 450000 477.95
+Hopper-v3 EQL 203 500000 531.96
+Hopper-v3 EQL 203 550000 481.08
+Hopper-v3 EQL 203 600000 481.6
+Hopper-v3 EQL 203 650000 420.52
+Hopper-v3 EQL 203 700000 546.89
+Hopper-v3 EQL 203 750000 370.53
+Hopper-v3 EQL 203 800000 589.01
+Hopper-v3 EQL 203 850000 483.01
+Hopper-v3 EQL 203 900000 581.28
+Hopper-v3 EQL 203 950000 590.25
+Hopper-v3 EQL 203 1000000 671.71
+Hopper-v3 EQL 204 NVIDIA GeForce RTX 2080 Ti
+Hopper-v3 EQL 204 0 9.34
+Hopper-v3 EQL 204 50000 185.94
+Hopper-v3 EQL 204 100000 239.22
+Hopper-v3 EQL 204 150000 325.64
+Hopper-v3 EQL 204 200000 373.63
+Hopper-v3 EQL 204 250000 406.52
+Hopper-v3 EQL 204 300000 637.3
+Hopper-v3 EQL 204 350000 547.06
+Hopper-v3 EQL 204 400000 578.42
+Hopper-v3 EQL 204 450000 529.87
+Hopper-v3 EQL 204 500000 460.1
+Hopper-v3 EQL 204 550000 469.61
+Hopper-v3 EQL 204 600000 488.47
+Hopper-v3 EQL 204 650000 485.39
+[2026-11-18T17:56:27.774] error: *** STEP 43357300.3 ON g3016 CANCELLED AT 2026-11-18T17:56:27 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+srun: error: g3016: task 0: Terminated

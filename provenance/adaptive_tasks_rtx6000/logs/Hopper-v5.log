@@ -1,0 +1,86 @@
+g3034 Quadro RTX 6000 Hopper-v5 seeds=[201, 202, 203, 204]
+E1118 15:09:14.921641 2191298 pjrt_stream_executor_client.cc:3086] Execution of replica 0 failed: INTERNAL: CustomCall failed: CpuCallback error: Traceback (most recent call last):
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 144, in <module>
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 107, in run
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 337, in cache_miss
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 195, in _python_pjit_helper
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 1695, in _pjit_call_impl_python
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/profiler.py", line 333, in wrapper
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/pxla.py", line 1289, in __call__
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/mlir.py", line 2906, in _wrapped_callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/mlir.py", line 2854, in _wrapped_callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/callback.py", line 555, in _callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/callback.py", line 491, in io_callback_impl
+RuntimeError: jax.io_callback failed to find a local CPU device to place the inputs on. Make sure "cpu" is listed in --jax_platforms or the JAX_PLATFORMS environment variable.
+Traceback (most recent call last):
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 144, in <module>
+    run(args.task, args.output)
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 107, in run
+    state = init(jax.random.PRNGKey(seed))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: INTERNAL: CustomCall failed: CpuCallback error: Traceback (most recent call last):
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 144, in <module>
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/EQL-adaptive-tasks/run_adaptive_tasks.py", line 107, in run
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/traceback_util.py", line 180, in reraise_with_filtered_traceback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 337, in cache_miss
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 195, in _python_pjit_helper
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/pjit.py", line 1695, in _pjit_call_impl_python
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/profiler.py", line 333, in wrapper
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/pxla.py", line 1289, in __call__
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/mlir.py", line 2906, in _wrapped_callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/interpreters/mlir.py", line 2854, in _wrapped_callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/callback.py", line 555, in _callback
+  File "/tmp/eql-xyuchern-cb5f7e7-v1/venv/lib/python3.11/site-packages/jax/_src/callback.py", line 491, in io_callback_impl
+RuntimeError: jax.io_callback failed to find a local CPU device to place the inputs on. Make sure "cpu" is listed in --jax_platforms or the JAX_PLATFORMS environment variable.
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
+g3034 Quadro RTX 6000 Hopper-v5 seeds=[201, 202, 203, 204]
+Hopper-v5 seed=201 step=2500 rounds=1
+Hopper-v5 seed=201 step=10000 rounds=7
+Hopper-v5 seed=201 step=20000 rounds=12
+Hopper-v5 seed=201 step=30000 rounds=16
+Hopper-v5 seed=201 step=40000 rounds=19
+Hopper-v5 seed=201 step=50000 rounds=22
+Hopper-v5 seed=201 step=60000 rounds=25
+Hopper-v5 seed=201 step=70000 rounds=29
+Hopper-v5 seed=201 step=80000 rounds=33
+Hopper-v5 seed=201 step=90000 rounds=37
+Hopper-v5 seed=201 step=100000 rounds=42
+Hopper-v5 seed=201 finished score=238.828
+Hopper-v5 seed=202 step=2500 rounds=0
+Hopper-v5 seed=202 step=10000 rounds=6
+Hopper-v5 seed=202 step=20000 rounds=12
+Hopper-v5 seed=202 step=30000 rounds=16
+Hopper-v5 seed=202 step=40000 rounds=18
+Hopper-v5 seed=202 step=50000 rounds=19
+Hopper-v5 seed=202 step=60000 rounds=22
+Hopper-v5 seed=202 step=70000 rounds=26
+Hopper-v5 seed=202 step=80000 rounds=30
+Hopper-v5 seed=202 step=90000 rounds=34
+Hopper-v5 seed=202 step=100000 rounds=38
+Hopper-v5 seed=202 finished score=294.508
+Hopper-v5 seed=203 step=2500 rounds=1
+Hopper-v5 seed=203 step=10000 rounds=6
+Hopper-v5 seed=203 step=20000 rounds=12
+Hopper-v5 seed=203 step=30000 rounds=15
+Hopper-v5 seed=203 step=40000 rounds=17
+Hopper-v5 seed=203 step=50000 rounds=18
+Hopper-v5 seed=203 step=60000 rounds=20
+Hopper-v5 seed=203 step=70000 rounds=23
+Hopper-v5 seed=203 step=80000 rounds=27
+Hopper-v5 seed=203 step=90000 rounds=31
+Hopper-v5 seed=203 step=100000 rounds=35
+Hopper-v5 seed=203 finished score=361.766
+Hopper-v5 seed=204 step=2500 rounds=0
+Hopper-v5 seed=204 step=10000 rounds=6
+Hopper-v5 seed=204 step=20000 rounds=11
+Hopper-v5 seed=204 step=30000 rounds=14
+Hopper-v5 seed=204 step=40000 rounds=16
+Hopper-v5 seed=204 step=50000 rounds=18
+Hopper-v5 seed=204 step=60000 rounds=19
+Hopper-v5 seed=204 step=70000 rounds=22
+Hopper-v5 seed=204 step=80000 rounds=25
+Hopper-v5 seed=204 step=90000 rounds=29
+Hopper-v5 seed=204 step=100000 rounds=33
+Hopper-v5 seed=204 finished score=316.109

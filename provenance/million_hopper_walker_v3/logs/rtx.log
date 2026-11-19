@@ -1,0 +1,98 @@
+engine 210 0.29.1
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 gymnasium.envs.mujoco.hopper_v3:HopperEnv (11,) 0.9947563881586902
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+Walker2d-v3 gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv (17,) 1.0031318085797971
+Quadro RTX 6000, 24576 MiB
+START Walker2d-v3 SAC10 2026-11-18T16:47:32-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 SAC10 201 Quadro RTX 6000
+Walker2d-v3 SAC10 201 0 -13.69
+Walker2d-v3 SAC10 201 50000 183.84
+Walker2d-v3 SAC10 201 100000 442.65
+Walker2d-v3 SAC10 201 150000 397.88
+Walker2d-v3 SAC10 201 200000 410.85
+Walker2d-v3 SAC10 201 250000 467.67
+Walker2d-v3 SAC10 201 300000 516.44
+Walker2d-v3 SAC10 201 350000 575.56
+Walker2d-v3 SAC10 201 400000 501.0
+Walker2d-v3 SAC10 201 450000 593.61
+Walker2d-v3 SAC10 201 500000 593.79
+Walker2d-v3 SAC10 201 550000 640.37
+Walker2d-v3 SAC10 201 600000 639.97
+Walker2d-v3 SAC10 201 650000 646.83
+Walker2d-v3 SAC10 201 700000 631.86
+Walker2d-v3 SAC10 201 750000 638.78
+Walker2d-v3 SAC10 201 800000 627.46
+Walker2d-v3 SAC10 201 850000 625.62
+Walker2d-v3 SAC10 201 900000 630.01
+Walker2d-v3 SAC10 201 950000 631.63
+Walker2d-v3 SAC10 201 1000000 632.9
+Walker2d-v3 SAC10 202 Quadro RTX 6000
+Walker2d-v3 SAC10 202 0 -3.84
+Walker2d-v3 SAC10 202 50000 213.54
+Walker2d-v3 SAC10 202 100000 450.85
+Walker2d-v3 SAC10 202 150000 409.57
+Walker2d-v3 SAC10 202 200000 561.58
+Walker2d-v3 SAC10 202 250000 559.56
+Walker2d-v3 SAC10 202 300000 537.23
+Walker2d-v3 SAC10 202 350000 556.48
+Walker2d-v3 SAC10 202 400000 575.75
+Walker2d-v3 SAC10 202 450000 583.54
+Walker2d-v3 SAC10 202 500000 583.95
+Walker2d-v3 SAC10 202 550000 596.96
+Walker2d-v3 SAC10 202 600000 625.54
+Walker2d-v3 SAC10 202 650000 608.53
+Walker2d-v3 SAC10 202 700000 618.71
+Walker2d-v3 SAC10 202 750000 612.08
+Walker2d-v3 SAC10 202 800000 615.67
+Walker2d-v3 SAC10 202 850000 631.13
+Walker2d-v3 SAC10 202 900000 626.24
+Walker2d-v3 SAC10 202 950000 627.5
+Walker2d-v3 SAC10 202 1000000 634.86
+Walker2d-v3 SAC10 203 Quadro RTX 6000
+Walker2d-v3 SAC10 203 0 -5.8
+Walker2d-v3 SAC10 203 50000 266.34
+Walker2d-v3 SAC10 203 100000 414.99
+Walker2d-v3 SAC10 203 150000 420.12
+Walker2d-v3 SAC10 203 200000 455.46
+Walker2d-v3 SAC10 203 250000 485.15
+Walker2d-v3 SAC10 203 300000 502.0
+Walker2d-v3 SAC10 203 350000 556.83
+Walker2d-v3 SAC10 203 400000 540.95
+Walker2d-v3 SAC10 203 450000 515.61
+Walker2d-v3 SAC10 203 500000 532.8
+Walker2d-v3 SAC10 203 550000 519.16
+Walker2d-v3 SAC10 203 600000 513.31
+Walker2d-v3 SAC10 203 650000 524.21
+Walker2d-v3 SAC10 203 700000 528.06
+Walker2d-v3 SAC10 203 750000 519.56
+Walker2d-v3 SAC10 203 800000 542.99
+Walker2d-v3 SAC10 203 850000 521.52
+Walker2d-v3 SAC10 203 900000 535.05
+Walker2d-v3 SAC10 203 950000 539.02
+Walker2d-v3 SAC10 203 1000000 546.45
+Walker2d-v3 SAC10 204 Quadro RTX 6000
+Walker2d-v3 SAC10 204 0 -5.12
+Walker2d-v3 SAC10 204 50000 248.03
+Walker2d-v3 SAC10 204 100000 397.65
+Walker2d-v3 SAC10 204 150000 469.45
+Walker2d-v3 SAC10 204 200000 211.26
+Walker2d-v3 SAC10 204 250000 489.49
+Walker2d-v3 SAC10 204 300000 496.03
+Walker2d-v3 SAC10 204 350000 492.07
+Walker2d-v3 SAC10 204 400000 493.1
+Walker2d-v3 SAC10 204 450000 488.24
+Walker2d-v3 SAC10 204 500000 486.47
+Walker2d-v3 SAC10 204 550000 491.15
+Walker2d-v3 SAC10 204 600000 482.99
+[2026-11-18T17:10:46.219] error: *** STEP 43358508.17 ON g3034 CANCELLED AT 2026-11-18T17:10:46 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+srun: error: g3034: task 0: Terminated

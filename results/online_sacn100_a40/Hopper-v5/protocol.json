@@ -1,0 +1,26 @@
+{
+  "task": "Hopper-v5",
+  "method": "online SAC-N",
+  "config": {
+    "num_envs": 10,
+    "num_critics": 100,
+    "total_timesteps": 100000,
+    "learning_rate": 0.001,
+    "gamma": 0.98
+  },
+  "seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "evaluation_episodes": 128,
+  "device": "NVIDIA A40",
+  "source_sha256": {
+    "sac.py": "d7aa94c57b991c7fa399f07da8f50f5eb71a5b3ca80ee10c7c1274bac9a20ed4",
+    "search_four.py": "7f118a2bb325c03b6977dc1604e888d020367c5b0a68c38212af254ca38c08a5",
+    "pendulum_tau_grid.py": "97f0541a4a8a5b5bacf21ab22dcf5a33bf14f986c32a68f4052cb77f32b64c10",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde",
+    "run_online_sac_n.py": "8bb383813070b0335470c9d4ebeaf149beca2585328c4cc1754d947279c7dc6e"
+  }
+}

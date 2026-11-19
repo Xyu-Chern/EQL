@@ -1,0 +1,20 @@
+{
+  "seed": 204,
+  "steps": 1000000,
+  "updates": 99796,
+  "score": 1101.861402782866,
+  "devices": [
+    {
+      "from_step": 0,
+      "gpu": "Quadro RTX 6000",
+      "job": "43358508",
+      "node": "g3034"
+    },
+    {
+      "node": "g3034",
+      "gpu": "Quadro RTX 6000",
+      "job": "43363983",
+      "from_step": 600000
+    }
+  ]
+}

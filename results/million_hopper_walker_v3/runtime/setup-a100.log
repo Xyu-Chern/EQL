@@ -1,0 +1,21 @@
+engine 210 0.29.1
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 gymnasium.envs.mujoco.hopper_v3:HopperEnv (11,) 0.9947563881586902
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+Walker2d-v3 gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv (17,) 1.0031318085797971
+device NVIDIA A100 80GB PCIe gpu
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+verified 2300 env steps 26 critic updates 26 actor updates
+jax 0.4.38
+jaxlib 0.4.38
+rejax 0.1.3
+gymnasium 0.29.1
+mujoco-py 2.1.2.14
+flax 0.10.2

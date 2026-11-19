@@ -1,0 +1,12 @@
+NVIDIA L40, 46068 MiB
+START Hopper-v5 SAC100 2026-11-18T16:38:34-08:00
+Hopper-v5 SAC100 201 NVIDIA L40
+Hopper-v5 SAC100 201 0 57.38
+Hopper-v5 SAC100 201 50000 239.66
+Hopper-v5 SAC100 201 100000 285.0
+Hopper-v5 SAC100 201 150000 273.42
+Hopper-v5 SAC100 201 200000 283.53
+Hopper-v5 SAC100 201 250000 291.89
+[2026-11-18T16:41:36.024] error: *** STEP 43357299.1 ON g3097 CANCELLED AT 2026-11-18T16:41:36 DUE to SIGNAL Killed ***
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+srun: error: g3097: task 0: Killed

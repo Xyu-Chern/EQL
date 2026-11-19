@@ -1,0 +1,243 @@
+engine 210 0.29.1
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 gymnasium.envs.mujoco.hopper_v3:HopperEnv (11,) 0.9947563881586902
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+Walker2d-v3 gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv (17,) 1.0031318085797971
+NVIDIA L40, 46068 MiB
+START Hopper-v3 SAC100 2026-11-18T16:47:34-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 SAC100 201 NVIDIA L40
+Hopper-v3 SAC100 201 0 58.47
+Hopper-v3 SAC100 201 50000 267.62
+Hopper-v3 SAC100 201 100000 307.59
+Hopper-v3 SAC100 201 150000 301.47
+Hopper-v3 SAC100 201 200000 296.24
+Hopper-v3 SAC100 201 250000 310.45
+Hopper-v3 SAC100 201 300000 309.54
+Hopper-v3 SAC100 201 350000 303.73
+Hopper-v3 SAC100 201 400000 305.04
+Hopper-v3 SAC100 201 450000 302.45
+Hopper-v3 SAC100 201 500000 301.42
+Hopper-v3 SAC100 201 550000 304.48
+Hopper-v3 SAC100 201 600000 305.41
+Hopper-v3 SAC100 201 650000 312.9
+Hopper-v3 SAC100 201 700000 317.09
+Hopper-v3 SAC100 201 750000 324.55
+Hopper-v3 SAC100 201 800000 327.1
+Hopper-v3 SAC100 201 850000 330.73
+Hopper-v3 SAC100 201 900000 342.0
+Hopper-v3 SAC100 201 950000 353.72
+Hopper-v3 SAC100 201 1000000 387.05
+Hopper-v3 SAC100 202 NVIDIA L40
+Hopper-v3 SAC100 202 0 7.37
+Hopper-v3 SAC100 202 50000 266.18
+Hopper-v3 SAC100 202 100000 306.21
+Hopper-v3 SAC100 202 150000 316.68
+Hopper-v3 SAC100 202 200000 332.88
+Hopper-v3 SAC100 202 250000 376.65
+Hopper-v3 SAC100 202 300000 385.82
+Hopper-v3 SAC100 202 350000 394.46
+Hopper-v3 SAC100 202 400000 399.19
+Hopper-v3 SAC100 202 450000 396.78
+Hopper-v3 SAC100 202 500000 401.57
+Hopper-v3 SAC100 202 550000 398.49
+Hopper-v3 SAC100 202 600000 399.72
+Hopper-v3 SAC100 202 650000 394.76
+Hopper-v3 SAC100 202 700000 395.23
+Hopper-v3 SAC100 202 750000 392.88
+Hopper-v3 SAC100 202 800000 391.68
+Hopper-v3 SAC100 202 850000 391.94
+Hopper-v3 SAC100 202 900000 395.24
+Hopper-v3 SAC100 202 950000 391.84
+Hopper-v3 SAC100 202 1000000 393.27
+Hopper-v3 SAC100 203 NVIDIA L40
+Hopper-v3 SAC100 203 0 13.59
+Hopper-v3 SAC100 203 50000 244.29
+Hopper-v3 SAC100 203 100000 262.45
+Hopper-v3 SAC100 203 150000 273.14
+Hopper-v3 SAC100 203 200000 272.75
+Hopper-v3 SAC100 203 250000 275.89
+Hopper-v3 SAC100 203 300000 277.83
+Hopper-v3 SAC100 203 350000 289.89
+Hopper-v3 SAC100 203 400000 304.35
+Hopper-v3 SAC100 203 450000 336.01
+Hopper-v3 SAC100 203 500000 370.32
+Hopper-v3 SAC100 203 550000 378.41
+Hopper-v3 SAC100 203 600000 382.61
+Hopper-v3 SAC100 203 650000 384.06
+Hopper-v3 SAC100 203 700000 385.31
+Hopper-v3 SAC100 203 750000 385.62
+Hopper-v3 SAC100 203 800000 387.05
+Hopper-v3 SAC100 203 850000 388.74
+Hopper-v3 SAC100 203 900000 387.25
+Hopper-v3 SAC100 203 950000 390.03
+Hopper-v3 SAC100 203 1000000 390.33
+Hopper-v3 SAC100 204 NVIDIA L40
+Hopper-v3 SAC100 204 0 9.35
+Hopper-v3 SAC100 204 50000 217.56
+Hopper-v3 SAC100 204 100000 267.95
+Hopper-v3 SAC100 204 150000 281.5
+Hopper-v3 SAC100 204 200000 292.49
+Hopper-v3 SAC100 204 250000 297.2
+Hopper-v3 SAC100 204 300000 316.39
+Hopper-v3 SAC100 204 350000 342.75
+Hopper-v3 SAC100 204 400000 376.05
+Hopper-v3 SAC100 204 450000 377.52
+Hopper-v3 SAC100 204 500000 381.47
+Hopper-v3 SAC100 204 550000 387.25
+Hopper-v3 SAC100 204 600000 396.21
+Hopper-v3 SAC100 204 650000 399.88
+Hopper-v3 SAC100 204 700000 404.24
+Hopper-v3 SAC100 204 750000 406.41
+Hopper-v3 SAC100 204 800000 409.09
+Hopper-v3 SAC100 204 850000 410.57
+Hopper-v3 SAC100 204 900000 410.21
+Hopper-v3 SAC100 204 950000 415.65
+Hopper-v3 SAC100 204 1000000 417.72
+START Walker2d-v3 SAC100 2026-11-18T17:18:35-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 SAC100 201 NVIDIA L40
+Walker2d-v3 SAC100 201 0 -13.68
+Walker2d-v3 SAC100 201 50000 135.85
+Walker2d-v3 SAC100 201 100000 415.98
+Walker2d-v3 SAC100 201 150000 476.96
+Walker2d-v3 SAC100 201 200000 481.11
+Walker2d-v3 SAC100 201 250000 505.45
+Walker2d-v3 SAC100 201 300000 478.99
+Walker2d-v3 SAC100 201 350000 485.83
+Walker2d-v3 SAC100 201 400000 478.11
+Walker2d-v3 SAC100 201 450000 483.53
+Walker2d-v3 SAC100 201 500000 486.36
+Walker2d-v3 SAC100 201 550000 496.25
+Walker2d-v3 SAC100 201 600000 509.79
+Walker2d-v3 SAC100 201 650000 506.92
+Walker2d-v3 SAC100 201 700000 508.59
+Walker2d-v3 SAC100 201 750000 482.96
+Walker2d-v3 SAC100 201 800000 487.09
+Walker2d-v3 SAC100 201 850000 491.41
+Walker2d-v3 SAC100 201 900000 502.85
+Walker2d-v3 SAC100 201 950000 508.65
+Walker2d-v3 SAC100 201 1000000 504.3
+Walker2d-v3 SAC100 202 NVIDIA L40
+Walker2d-v3 SAC100 202 0 -3.83
+Walker2d-v3 SAC100 202 50000 128.13
+Walker2d-v3 SAC100 202 100000 410.21
+Walker2d-v3 SAC100 202 150000 529.77
+Walker2d-v3 SAC100 202 200000 614.0
+Walker2d-v3 SAC100 202 250000 624.66
+Walker2d-v3 SAC100 202 300000 630.17
+Walker2d-v3 SAC100 202 350000 606.89
+Walker2d-v3 SAC100 202 400000 598.18
+Walker2d-v3 SAC100 202 450000 601.43
+Walker2d-v3 SAC100 202 500000 590.34
+Walker2d-v3 SAC100 202 550000 597.56
+Walker2d-v3 SAC100 202 600000 627.52
+Walker2d-v3 SAC100 202 650000 633.44
+Walker2d-v3 SAC100 202 700000 640.98
+Walker2d-v3 SAC100 202 750000 640.0
+Walker2d-v3 SAC100 202 800000 649.64
+Walker2d-v3 SAC100 202 850000 634.61
+Walker2d-v3 SAC100 202 900000 665.58
+Walker2d-v3 SAC100 202 950000 677.36
+Walker2d-v3 SAC100 202 1000000 665.72
+Walker2d-v3 SAC100 203 NVIDIA L40
+Walker2d-v3 SAC100 203 0 -5.79
+Walker2d-v3 SAC100 203 50000 187.14
+Walker2d-v3 SAC100 203 100000 324.37
+Walker2d-v3 SAC100 203 150000 355.43
+Walker2d-v3 SAC100 203 200000 432.66
+Walker2d-v3 SAC100 203 250000 433.44
+Walker2d-v3 SAC100 203 300000 436.93
+Walker2d-v3 SAC100 203 350000 453.07
+Walker2d-v3 SAC100 203 400000 499.23
+Walker2d-v3 SAC100 203 450000 512.89
+Walker2d-v3 SAC100 203 500000 528.43
+Walker2d-v3 SAC100 203 550000 526.51
+Walker2d-v3 SAC100 203 600000 530.01
+Walker2d-v3 SAC100 203 650000 533.53
+Walker2d-v3 SAC100 203 700000 546.34
+Walker2d-v3 SAC100 203 750000 532.28
+Walker2d-v3 SAC100 203 800000 524.11
+Walker2d-v3 SAC100 203 850000 518.57
+Walker2d-v3 SAC100 203 900000 515.48
+Walker2d-v3 SAC100 203 950000 527.18
+Walker2d-v3 SAC100 203 1000000 508.27
+Walker2d-v3 SAC100 204 NVIDIA L40
+Walker2d-v3 SAC100 204 0 -5.1
+Walker2d-v3 SAC100 204 50000 185.66
+Walker2d-v3 SAC100 204 100000 253.56
+Walker2d-v3 SAC100 204 150000 304.15
+Walker2d-v3 SAC100 204 200000 285.8
+Walker2d-v3 SAC100 204 250000 365.86
+Walker2d-v3 SAC100 204 300000 359.95
+Walker2d-v3 SAC100 204 350000 356.62
+Walker2d-v3 SAC100 204 400000 379.9
+Walker2d-v3 SAC100 204 450000 360.6
+Walker2d-v3 SAC100 204 500000 386.49
+Walker2d-v3 SAC100 204 550000 390.88
+Walker2d-v3 SAC100 204 600000 413.72
+Walker2d-v3 SAC100 204 650000 415.38
+Walker2d-v3 SAC100 204 700000 407.63
+Walker2d-v3 SAC100 204 750000 426.25
+Walker2d-v3 SAC100 204 800000 423.74
+Walker2d-v3 SAC100 204 850000 419.23
+Walker2d-v3 SAC100 204 900000 419.98
+Walker2d-v3 SAC100 204 950000 413.81
+Walker2d-v3 SAC100 204 1000000 434.48
+START Hopper-v3 Adaptive11 2026-11-18T17:57:00-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 204 NVIDIA L40
+Hopper-v3 EQL 204 650000 490.35
+Hopper-v3 EQL 204 700000 500.36
+Hopper-v3 EQL 204 750000 475.94
+Hopper-v3 EQL 204 800000 507.56
+Hopper-v3 EQL 204 850000 452.66
+Hopper-v3 EQL 204 900000 485.83
+Hopper-v3 EQL 204 950000 471.37
+Hopper-v3 EQL 204 1000000 517.42
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 Adaptive11 202 NVIDIA L40
+Hopper-v3 Adaptive11 202 0 38.85
+Hopper-v3 Adaptive11 202 50000 577.38
+Hopper-v3 Adaptive11 202 100000 323.62
+Hopper-v3 Adaptive11 202 150000 391.0
+Hopper-v3 Adaptive11 202 200000 510.42
+Hopper-v3 Adaptive11 202 250000 659.24
+Hopper-v3 Adaptive11 202 300000 631.25
+Hopper-v3 Adaptive11 202 350000 1413.21
+Hopper-v3 Adaptive11 202 400000 686.87
+Hopper-v3 Adaptive11 202 450000 704.51
+Hopper-v3 Adaptive11 202 500000 791.5
+Hopper-v3 Adaptive11 202 550000 764.96
+Hopper-v3 Adaptive11 202 600000 722.33
+Hopper-v3 Adaptive11 202 650000 849.38
+Hopper-v3 Adaptive11 202 700000 645.01
+Hopper-v3 Adaptive11 202 750000 953.53
+Hopper-v3 Adaptive11 202 800000 1014.02
+Hopper-v3 Adaptive11 202 850000 889.5
+Hopper-v3 Adaptive11 202 900000 702.98
+Hopper-v3 Adaptive11 202 950000 708.25
+Hopper-v3 Adaptive11 202 1000000 851.92
+START Walker2d-v3 Adaptive11 2026-11-18T18:10:19-08:00
+START Hopper-v3 EQL_bagging 2026-11-18T18:10:19-08:00
+START Walker2d-v3 EQL_bagging 2026-11-18T18:10:19-08:00
+START Hopper-v3 EQL 2026-11-18T18:10:20-08:00
+START Walker2d-v3 EQL 2026-11-18T18:10:20-08:00
+START Hopper-v3 SAC10 2026-11-18T18:10:20-08:00
+START Walker2d-v3 SAC10 2026-11-18T18:10:20-08:00

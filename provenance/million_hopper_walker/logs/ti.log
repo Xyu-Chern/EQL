@@ -1,0 +1,13 @@
+NVIDIA GeForce RTX 2080 Ti, 11264 MiB
+START Walker2d-v5 EQL 2026-11-18T16:38:31-08:00
+Walker2d-v5 EQL 201 NVIDIA GeForce RTX 2080 Ti
+Walker2d-v5 EQL 201 0 -14.16
+Walker2d-v5 EQL 201 50000 319.52
+Walker2d-v5 EQL 201 100000 535.43
+Walker2d-v5 EQL 201 150000 442.2
+Walker2d-v5 EQL 201 200000 260.44
+Walker2d-v5 EQL 201 250000 568.07
+Walker2d-v5 EQL 201 300000 400.04
+[2026-11-18T16:41:36.021] error: *** STEP 43357300.1 ON g3016 CANCELLED AT 2026-11-18T16:41:36 DUE to SIGNAL Killed ***
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+srun: error: g3016: task 0: Killed

@@ -1,0 +1,11 @@
+g3047
+NVIDIA A40, 46068 MiB, 0 MiB
+Verified 100 critics: {'num_envs': 10, 'num_critics': 100, 'total_timesteps': 100000, 'learning_rate': 0.001, 'gamma': 0.98}
+START Pendulum-v1
+DONE Pendulum-v1
+START Reacher-misc
+DONE Reacher-misc
+START Hopper-v5
+DONE Hopper-v5
+START Walker2d-v5
+DONE Walker2d-v5

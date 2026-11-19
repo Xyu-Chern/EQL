@@ -1,0 +1,47 @@
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/tmp/eql-xyuchern-cb5f7e7-v1/eql-v3-a100/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 201 NVIDIA A100 80GB PCIe starting at 0
+Walker2d-v3 201 1 0
+Walker2d-v3 201 100 0
+Walker2d-v3 201 1000 0
+Walker2d-v3 201 2000 0
+Walker2d-v3 201 3000 0
+Walker2d-v3 201 4000 0
+Walker2d-v3 201 5000 0
+Walker2d-v3 201 6000 0
+Walker2d-v3 201 7000 0
+Walker2d-v3 201 8000 0
+Walker2d-v3 201 9000 0
+Walker2d-v3 201 10000 1
+Walker2d-v3 201 10001 2
+Walker2d-v3 201 10010 11
+Walker2d-v3 201 10100 101
+Walker2d-v3 201 11000 1001
+Walker2d-v3 201 12000 2001
+Walker2d-v3 201 13000 3001
+Walker2d-v3 201 14000 4001
+Walker2d-v3 201 15000 5001
+Walker2d-v3 201 16000 6001
+Walker2d-v3 201 17000 7001
+Walker2d-v3 201 18000 8001
+Walker2d-v3 201 19000 9001
+Walker2d-v3 201 20000 10001
+Walker2d-v3 201 21000 11001
+Walker2d-v3 201 22000 12001
+Walker2d-v3 201 23000 13001
+Walker2d-v3 201 24000 14001
+Walker2d-v3 201 25000 15001
+Walker2d-v3 201 26000 16001
+Walker2d-v3 201 27000 17001
+Walker2d-v3 201 28000 18001
+Walker2d-v3 201 29000 19001
+Walker2d-v3 201 30000 20001
+Walker2d-v3 201 31000 21001
+Walker2d-v3 201 32000 22001
+Walker2d-v3 201 33000 23001
+Walker2d-v3 201 34000 24001
+Walker2d-v3 201 35000 25001
+Walker2d-v3 201 36000 26001
+Walker2d-v3 201 37000 27001

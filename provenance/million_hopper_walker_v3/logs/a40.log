@@ -1,0 +1,208 @@
+engine 210 0.29.1
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 gymnasium.envs.mujoco.hopper_v3:HopperEnv (11,) 0.9947563881586902
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+Walker2d-v3 gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv (17,) 1.0031318085797971
+NVIDIA A40, 46068 MiB
+START Hopper-v3 EQL_bagging 2026-11-18T16:47:26-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL_bagging 201 NVIDIA A40
+Hopper-v3 EQL_bagging 201 0 58.47
+Hopper-v3 EQL_bagging 201 50000 205.59
+Hopper-v3 EQL_bagging 201 100000 330.38
+Hopper-v3 EQL_bagging 201 150000 344.99
+Hopper-v3 EQL_bagging 201 200000 425.05
+Hopper-v3 EQL_bagging 201 250000 358.64
+Hopper-v3 EQL_bagging 201 300000 442.3
+Hopper-v3 EQL_bagging 201 350000 514.39
+Hopper-v3 EQL_bagging 201 400000 571.36
+Hopper-v3 EQL_bagging 201 450000 662.8
+Hopper-v3 EQL_bagging 201 500000 594.16
+Hopper-v3 EQL_bagging 201 550000 631.66
+Hopper-v3 EQL_bagging 201 600000 682.57
+Hopper-v3 EQL_bagging 201 650000 648.91
+Hopper-v3 EQL_bagging 201 700000 701.78
+Hopper-v3 EQL_bagging 201 750000 660.13
+Hopper-v3 EQL_bagging 201 800000 608.69
+Hopper-v3 EQL_bagging 201 850000 640.94
+Hopper-v3 EQL_bagging 201 900000 610.4
+Hopper-v3 EQL_bagging 201 950000 602.9
+Hopper-v3 EQL_bagging 201 1000000 580.74
+Hopper-v3 EQL_bagging 202 NVIDIA A40
+Hopper-v3 EQL_bagging 202 0 7.37
+Hopper-v3 EQL_bagging 202 50000 187.39
+Hopper-v3 EQL_bagging 202 100000 331.71
+Hopper-v3 EQL_bagging 202 150000 365.08
+Hopper-v3 EQL_bagging 202 200000 376.95
+Hopper-v3 EQL_bagging 202 250000 365.69
+Hopper-v3 EQL_bagging 202 300000 383.79
+Hopper-v3 EQL_bagging 202 350000 427.71
+Hopper-v3 EQL_bagging 202 400000 395.52
+Hopper-v3 EQL_bagging 202 450000 473.41
+Hopper-v3 EQL_bagging 202 500000 478.39
+Hopper-v3 EQL_bagging 202 550000 507.19
+Hopper-v3 EQL_bagging 202 600000 470.7
+Hopper-v3 EQL_bagging 202 650000 540.51
+Hopper-v3 EQL_bagging 202 700000 485.55
+Hopper-v3 EQL_bagging 202 750000 555.2
+Hopper-v3 EQL_bagging 202 800000 619.44
+Hopper-v3 EQL_bagging 202 850000 643.03
+Hopper-v3 EQL_bagging 202 900000 619.54
+Hopper-v3 EQL_bagging 202 950000 737.95
+Hopper-v3 EQL_bagging 202 1000000 656.45
+Hopper-v3 EQL_bagging 203 NVIDIA A40
+Hopper-v3 EQL_bagging 203 0 13.59
+Hopper-v3 EQL_bagging 203 50000 222.75
+Hopper-v3 EQL_bagging 203 100000 335.22
+Hopper-v3 EQL_bagging 203 150000 372.93
+Hopper-v3 EQL_bagging 203 200000 314.0
+Hopper-v3 EQL_bagging 203 250000 365.9
+Hopper-v3 EQL_bagging 203 300000 363.97
+Hopper-v3 EQL_bagging 203 350000 358.24
+Hopper-v3 EQL_bagging 203 400000 353.37
+Hopper-v3 EQL_bagging 203 450000 351.4
+Hopper-v3 EQL_bagging 203 500000 319.67
+Hopper-v3 EQL_bagging 203 550000 339.05
+Hopper-v3 EQL_bagging 203 600000 350.13
+Hopper-v3 EQL_bagging 203 650000 367.68
+Hopper-v3 EQL_bagging 203 700000 351.64
+Hopper-v3 EQL_bagging 203 750000 563.32
+Hopper-v3 EQL_bagging 203 800000 319.7
+Hopper-v3 EQL_bagging 203 850000 539.99
+Hopper-v3 EQL_bagging 203 900000 590.82
+Hopper-v3 EQL_bagging 203 950000 701.86
+Hopper-v3 EQL_bagging 203 1000000 504.3
+Hopper-v3 EQL_bagging 204 NVIDIA A40
+Hopper-v3 EQL_bagging 204 0 9.35
+Hopper-v3 EQL_bagging 204 50000 181.53
+Hopper-v3 EQL_bagging 204 100000 387.44
+Hopper-v3 EQL_bagging 204 150000 306.85
+Hopper-v3 EQL_bagging 204 200000 395.6
+Hopper-v3 EQL_bagging 204 250000 388.07
+Hopper-v3 EQL_bagging 204 300000 394.41
+Hopper-v3 EQL_bagging 204 350000 379.73
+Hopper-v3 EQL_bagging 204 400000 379.77
+Hopper-v3 EQL_bagging 204 450000 379.13
+Hopper-v3 EQL_bagging 204 500000 386.51
+Hopper-v3 EQL_bagging 204 550000 389.27
+Hopper-v3 EQL_bagging 204 600000 388.8
+Hopper-v3 EQL_bagging 204 650000 385.83
+Hopper-v3 EQL_bagging 204 700000 397.61
+Hopper-v3 EQL_bagging 204 750000 393.94
+Hopper-v3 EQL_bagging 204 800000 395.41
+Hopper-v3 EQL_bagging 204 850000 396.5
+Hopper-v3 EQL_bagging 204 900000 452.85
+Hopper-v3 EQL_bagging 204 950000 549.84
+Hopper-v3 EQL_bagging 204 1000000 561.89
+START Walker2d-v3 EQL_bagging 2026-11-18T17:24:33-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 EQL_bagging 201 NVIDIA A40
+Walker2d-v3 EQL_bagging 201 0 -13.68
+Walker2d-v3 EQL_bagging 201 50000 154.85
+Walker2d-v3 EQL_bagging 201 100000 528.11
+Walker2d-v3 EQL_bagging 201 150000 281.38
+Walker2d-v3 EQL_bagging 201 200000 401.23
+Walker2d-v3 EQL_bagging 201 250000 361.29
+Walker2d-v3 EQL_bagging 201 300000 361.82
+Walker2d-v3 EQL_bagging 201 350000 368.93
+Walker2d-v3 EQL_bagging 201 400000 352.95
+Walker2d-v3 EQL_bagging 201 450000 417.5
+Walker2d-v3 EQL_bagging 201 500000 408.09
+Walker2d-v3 EQL_bagging 201 550000 465.34
+Walker2d-v3 EQL_bagging 201 600000 531.26
+Walker2d-v3 EQL_bagging 201 650000 497.67
+Walker2d-v3 EQL_bagging 201 700000 556.8
+Walker2d-v3 EQL_bagging 201 750000 563.8
+Walker2d-v3 EQL_bagging 201 800000 605.51
+Walker2d-v3 EQL_bagging 201 850000 675.28
+Walker2d-v3 EQL_bagging 201 900000 603.43
+Walker2d-v3 EQL_bagging 201 950000 633.4
+Walker2d-v3 EQL_bagging 201 1000000 555.46
+Walker2d-v3 EQL_bagging 202 NVIDIA A40
+Walker2d-v3 EQL_bagging 202 0 -3.83
+Walker2d-v3 EQL_bagging 202 50000 309.78
+Walker2d-v3 EQL_bagging 202 100000 464.32
+Walker2d-v3 EQL_bagging 202 150000 401.69
+Walker2d-v3 EQL_bagging 202 200000 486.66
+Walker2d-v3 EQL_bagging 202 250000 354.22
+Walker2d-v3 EQL_bagging 202 300000 341.76
+Walker2d-v3 EQL_bagging 202 350000 407.3
+Walker2d-v3 EQL_bagging 202 400000 445.7
+Walker2d-v3 EQL_bagging 202 450000 443.84
+Walker2d-v3 EQL_bagging 202 500000 410.48
+Walker2d-v3 EQL_bagging 202 550000 451.2
+Walker2d-v3 EQL_bagging 202 600000 463.4
+Walker2d-v3 EQL_bagging 202 650000 446.48
+Walker2d-v3 EQL_bagging 202 700000 411.14
+Walker2d-v3 EQL_bagging 202 750000 417.88
+Walker2d-v3 EQL_bagging 202 800000 423.03
+Walker2d-v3 EQL_bagging 202 850000 491.32
+Walker2d-v3 EQL_bagging 202 900000 436.39
+Walker2d-v3 EQL_bagging 202 950000 443.66
+Walker2d-v3 EQL_bagging 202 1000000 431.82
+Walker2d-v3 EQL_bagging 203 NVIDIA A40
+Walker2d-v3 EQL_bagging 203 0 -5.79
+Walker2d-v3 EQL_bagging 203 50000 281.32
+Walker2d-v3 EQL_bagging 203 100000 624.81
+Walker2d-v3 EQL_bagging 203 150000 433.83
+Walker2d-v3 EQL_bagging 203 200000 455.88
+Walker2d-v3 EQL_bagging 203 250000 418.68
+Walker2d-v3 EQL_bagging 203 300000 387.94
+Walker2d-v3 EQL_bagging 203 350000 420.09
+Walker2d-v3 EQL_bagging 203 400000 422.29
+Walker2d-v3 EQL_bagging 203 450000 431.87
+Walker2d-v3 EQL_bagging 203 500000 419.55
+Walker2d-v3 EQL_bagging 203 550000 429.6
+Walker2d-v3 EQL_bagging 203 600000 389.96
+Walker2d-v3 EQL_bagging 203 650000 438.39
+Walker2d-v3 EQL_bagging 203 700000 386.55
+Walker2d-v3 EQL_bagging 203 750000 462.04
+Walker2d-v3 EQL_bagging 203 800000 488.61
+Walker2d-v3 EQL_bagging 203 850000 438.15
+Walker2d-v3 EQL_bagging 203 900000 464.55
+Walker2d-v3 EQL_bagging 203 950000 567.18
+Walker2d-v3 EQL_bagging 203 1000000 1752.94
+Walker2d-v3 EQL_bagging 204 NVIDIA A40
+Walker2d-v3 EQL_bagging 204 0 -5.1
+Walker2d-v3 EQL_bagging 204 50000 270.34
+Walker2d-v3 EQL_bagging 204 100000 395.47
+Walker2d-v3 EQL_bagging 204 150000 373.15
+Walker2d-v3 EQL_bagging 204 200000 318.84
+Walker2d-v3 EQL_bagging 204 250000 528.46
+Walker2d-v3 EQL_bagging 204 300000 437.87
+Walker2d-v3 EQL_bagging 204 350000 394.83
+Walker2d-v3 EQL_bagging 204 400000 429.53
+Walker2d-v3 EQL_bagging 204 450000 671.89
+Walker2d-v3 EQL_bagging 204 500000 215.98
+Walker2d-v3 EQL_bagging 204 550000 316.77
+Walker2d-v3 EQL_bagging 204 600000 482.38
+Walker2d-v3 EQL_bagging 204 650000 487.36
+Walker2d-v3 EQL_bagging 204 700000 460.58
+Walker2d-v3 EQL_bagging 204 750000 325.35
+Walker2d-v3 EQL_bagging 204 800000 272.48
+Walker2d-v3 EQL_bagging 204 850000 474.92
+Walker2d-v3 EQL_bagging 204 900000 432.49
+Walker2d-v3 EQL_bagging 204 950000 559.84
+Walker2d-v3 EQL_bagging 204 1000000 536.81
+START Hopper-v3 Adaptive11 2026-11-18T18:12:07-08:00
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+START Walker2d-v3 Adaptive11 2026-11-18T18:12:12-08:00
+START Hopper-v3 SAC100 2026-11-18T18:12:12-08:00
+START Walker2d-v3 SAC100 2026-11-18T18:12:12-08:00
+START Hopper-v3 EQL 2026-11-18T18:12:12-08:00
+START Walker2d-v3 EQL 2026-11-18T18:12:12-08:00
+START Hopper-v3 SAC10 2026-11-18T18:12:12-08:00
+START Walker2d-v3 SAC10 2026-11-18T18:12:12-08:00

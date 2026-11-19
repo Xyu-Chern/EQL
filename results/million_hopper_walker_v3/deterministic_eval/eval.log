@@ -1,0 +1,116 @@
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 201 1000000 866.63
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 202 1000000 528.51
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 203 1000000 699.53
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Hopper-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Hopper-v3 EQL 204 1000000 506.34
+Hopper-v3 EQL_bagging 201 1000000 574.54
+Hopper-v3 EQL_bagging 202 1000000 685.75
+Hopper-v3 EQL_bagging 203 1000000 430.57
+Hopper-v3 EQL_bagging 204 1000000 504.18
+Hopper-v3 SAC10 201 1000000 464.02
+Hopper-v3 SAC10 202 1000000 386.96
+Hopper-v3 SAC10 203 1000000 687.7
+Hopper-v3 SAC10 204 1000000 434.76
+Hopper-v3 SAC100 201 1000000 389.31
+Hopper-v3 SAC100 202 1000000 392.77
+Hopper-v3 SAC100 203 1000000 391.22
+Hopper-v3 SAC100 204 1000000 418.27
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 Adaptive11 201 1000000 245.97
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 Adaptive11 202 1000000 682.37
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 Adaptive11 203 1000000 1077.66
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/registration.py:513: DeprecationWarning: [33mWARN: The environment Walker2d-v3 is out of date. You should consider upgrading to version `v4`.[0m
+  logger.deprecation(
+/gscratch/stf/xyuchern/eql-million-hopper-walker-v3/deps/gymnasium/envs/mujoco/mujoco_env.py:211: DeprecationWarning: [33mWARN: This version of the mujoco environments depends on the mujoco-py bindings, which are no longer maintained and may stop working. Please upgrade to the v4 versions of the environments (which depend on the mujoco python bindings instead), unless you are trying to precisely replicate previous works).[0m
+  logger.deprecation(
+Walker2d-v3 Adaptive11 204 1000000 592.93
+Walker2d-v3 EQL 201 1000000 644.77
+Walker2d-v3 EQL 202 1000000 878.47
+Walker2d-v3 EQL 203 1000000 307.71
+Walker2d-v3 EQL 204 1000000 754.6
+Walker2d-v3 EQL_bagging 201 1000000 530.32
+Walker2d-v3 EQL_bagging 202 1000000 435.43
+Walker2d-v3 EQL_bagging 203 1000000 1125.84
+Walker2d-v3 SAC10 201 1000000 636.12
+Walker2d-v3 SAC10 202 1000000 637.18
+Walker2d-v3 SAC10 203 1000000 555.45
+Walker2d-v3 SAC10 204 1000000 1011.06
+Walker2d-v3 SAC100 201 1000000 512.71
+Walker2d-v3 SAC100 202 1000000 674.49
+Walker2d-v3 SAC100 203 1000000 515.98
+Walker2d-v3 SAC100 204 1000000 439.77
+Hopper-v3 Adaptive11 201 900000 838.14
+Hopper-v3 EQL 202 900000 466.61
+Hopper-v3 EQL 203 900000 414.21
+Hopper-v3 EQL 204 900000 479.66
+Hopper-v3 Adaptive11 201 500000 668.07
+Hopper-v3 Adaptive11 201 600000 727.21
+Hopper-v3 Adaptive11 201 700000 705.21
+Hopper-v3 Adaptive11 201 800000 663.77
+Hopper-v3 Adaptive11 202 100000 324.54
+Hopper-v3 Adaptive11 202 200000 490.09
+Hopper-v3 Adaptive11 202 300000 641.86
+Hopper-v3 Adaptive11 202 400000 770.42
+Hopper-v3 Adaptive11 202 500000 974.37
+Hopper-v3 Adaptive11 202 600000 724.6
+Hopper-v3 Adaptive11 203 100000 304.9
+Hopper-v3 Adaptive11 203 200000 858.79
+Hopper-v3 Adaptive11 203 300000 600.34
+Hopper-v3 Adaptive11 203 400000 656.42
+Hopper-v3 Adaptive11 203 500000 548.82
+Hopper-v3 Adaptive11 203 600000 656.34
+Hopper-v3 EQL 202 500000 504.92
+Walker2d-v3 EQL_bagging 204 200000 162.21
+Walker2d-v3 EQL_bagging 204 300000 434.62
+Walker2d-v3 EQL_bagging 204 400000 340.04
+Walker2d-v3 EQL_bagging 204 500000 195.19
+Hopper-v3 Adaptive11 201 1000000 779.33
+Hopper-v3 Adaptive11 202 1000000 911.79
+Hopper-v3 Adaptive11 203 1000000 654.15
+Hopper-v3 Adaptive11 204 1000000 574.69
+Walker2d-v3 EQL_bagging 204 1000000 554.51
+Hopper-v3 Adaptive11 202 700000 657.37
+Hopper-v3 Adaptive11 202 800000 1113.72
+Hopper-v3 Adaptive11 202 900000 686.05
+Hopper-v3 Adaptive11 203 700000 704.8
+Hopper-v3 Adaptive11 203 800000 784.26
+Hopper-v3 Adaptive11 203 900000 766.57
+Hopper-v3 Adaptive11 204 100000 264.53
+Hopper-v3 Adaptive11 204 200000 664.62
+Hopper-v3 Adaptive11 204 300000 575.36
+Hopper-v3 Adaptive11 204 400000 574.74
+Hopper-v3 Adaptive11 204 500000 588.15
+Hopper-v3 Adaptive11 204 600000 643.96
+Hopper-v3 Adaptive11 204 700000 548.72
+Hopper-v3 Adaptive11 204 800000 222.87
+Hopper-v3 Adaptive11 204 900000 782.9
+Walker2d-v3 EQL_bagging 204 600000 537.93
+Walker2d-v3 EQL_bagging 204 700000 474.49
+Walker2d-v3 EQL_bagging 204 800000 132.21
+Walker2d-v3 EQL_bagging 204 900000 419.58

@@ -1,0 +1,29 @@
+{
+  "task": "Reacher-misc",
+  "config": {
+    "num_envs": 10,
+    "num_critics": 10,
+    "total_timesteps": 100000,
+    "learning_rate": 0.001,
+    "gamma": 0.98
+  },
+  "seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "evaluation_episodes": 128,
+  "evaluator": "Rejax eval_callback",
+  "device": "Quadro RTX 6000",
+  "controller": "one complete post-warmup episode per slot per arm",
+  "source_sha256": {
+    "adaptive_eql.py": "3ce7941eb650463435a624a9af57f8585ac36cfdf82d8003e8c2cce15ed1c3a9",
+    "run_adaptive_tasks.py": "04ed25aaeb4bd8629a79564122e9fbde3c800f0047c50b7a3662503dce3471e8",
+    "eql.py": "1b186e9a767bcb6d2ce60541fa8eb9ecc53860cd2b027fee3ed055001d975a57",
+    "sac.py": "d7aa94c57b991c7fa399f07da8f50f5eb71a5b3ca80ee10c7c1274bac9a20ed4",
+    "search_four.py": "7f118a2bb325c03b6977dc1604e888d020367c5b0a68c38212af254ca38c08a5",
+    "pendulum_tau_grid.py": "d4a47a938a113997b189d1206866fc05dfa4d70acf2d419b7f63ec064a0bf969",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde"
+  }
+}

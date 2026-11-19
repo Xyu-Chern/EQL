@@ -1,0 +1,23 @@
+NVIDIA A40, 46068 MiB
+START Hopper-v5 EQL_bagging 2026-11-18T16:31:57-08:00
+Hopper-v5 EQL_bagging 201 NVIDIA A40
+Hopper-v5 EQL_bagging 201 0 57.38
+Hopper-v5 EQL_bagging 201 50000 200.03
+Hopper-v5 EQL_bagging 201 100000 373.17
+Hopper-v5 EQL_bagging 201 150000 237.12
+Hopper-v5 EQL_bagging 201 200000 362.63
+Hopper-v5 EQL_bagging 201 250000 331.72
+Hopper-v5 EQL_bagging 201 300000 491.71
+Hopper-v5 EQL_bagging 201 350000 548.89
+Hopper-v5 EQL_bagging 201 400000 564.19
+Hopper-v5 EQL_bagging 201 450000 576.7
+Hopper-v5 EQL_bagging 201 500000 537.97
+Hopper-v5 EQL_bagging 201 550000 599.13
+Hopper-v5 EQL_bagging 201 600000 601.38
+Hopper-v5 EQL_bagging 201 650000 546.02
+Hopper-v5 EQL_bagging 201 700000 613.85
+Hopper-v5 EQL_bagging 201 750000 612.53
+Hopper-v5 EQL_bagging 201 800000 599.23
+srun: Job step aborted: Waiting up to 12 seconds for job step to finish.
+[2026-11-18T16:41:36.023] error: *** STEP 43353787.28 ON g3047 CANCELLED AT 2026-11-18T16:41:36 DUE to SIGNAL Killed ***
+srun: error: g3047: task 0: Killed

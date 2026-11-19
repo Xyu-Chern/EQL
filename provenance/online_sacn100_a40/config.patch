@@ -1,0 +1,19 @@
+diff --git a/pendulum_tau_grid.py b/pendulum_tau_grid.py
+index d04bfc2..7f8d57f 100644
+--- a/pendulum_tau_grid.py
++++ b/pendulum_tau_grid.py
+@@ -20,7 +20,7 @@ SAC = Path("results/search_four/Pendulum-v1/SAC")
+ SEEDS = [201, 202, 203, 204]
+ GRID = list(itertools.product([0., 0.1, 0.3], [0., 0.5, 0.7]))
+ METHODS = {"EQL": EQL, "EQL_bagging": OriginalBagEQL}
+-COMMON = CONFIG | {"learning_rate": 1e-3}
++COMMON = CONFIG | {"learning_rate": 1e-3, "num_critics": 100}
+ 
+ 
+ def save(path, record):
+@@ -130,4 +130,4 @@ def suite():
+ 
+ if __name__=="__main__":
+     if len(sys.argv)==1: suite()
+-    else: run(sys.argv[1],float(sys.argv[2]),float(sys.argv[3]))
++    else: run(sys.argv[1],float(sys.argv[2]),float(sys.argv[3]))

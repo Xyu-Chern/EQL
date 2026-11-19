@@ -1,0 +1,14 @@
+{
+  "seed": 201,
+  "steps": 1000000,
+  "updates": 99796,
+  "score": 757.4362562689312,
+  "devices": [
+    {
+      "node": "g3016",
+      "gpu": "NVIDIA GeForce RTX 2080 Ti",
+      "job": "43364140",
+      "from_step": 0
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+Walker2d-v5 NVIDIA A40 {'num_envs': 10, 'num_critics': 100, 'total_timesteps': 100000, 'learning_rate': 0.001, 'gamma': 0.98} [201, 202, 203, 204]
+Walker2d-v5 201 10000
+Walker2d-v5 201 20000
+Walker2d-v5 201 30000
+Walker2d-v5 201 40000
+Walker2d-v5 201 50000
+Walker2d-v5 201 60000
+Walker2d-v5 201 70000
+Walker2d-v5 201 80000
+Walker2d-v5 201 90000
+Walker2d-v5 201 100000
+Walker2d-v5 201 finished 475.237197529465
+Walker2d-v5 202 10000
+Walker2d-v5 202 20000
+Walker2d-v5 202 30000
+Walker2d-v5 202 40000
+Walker2d-v5 202 50000
+Walker2d-v5 202 60000
+Walker2d-v5 202 70000
+Walker2d-v5 202 80000
+Walker2d-v5 202 90000
+Walker2d-v5 202 100000
+Walker2d-v5 202 finished 484.7786231437938
+Walker2d-v5 203 10000
+Walker2d-v5 203 20000
+Walker2d-v5 203 30000
+Walker2d-v5 203 40000
+Walker2d-v5 203 50000
+Walker2d-v5 203 60000
+Walker2d-v5 203 70000
+Walker2d-v5 203 80000
+Walker2d-v5 203 90000
+Walker2d-v5 203 100000
+Walker2d-v5 203 finished 412.22923987264426
+Walker2d-v5 204 10000
+Walker2d-v5 204 20000
+Walker2d-v5 204 30000
+Walker2d-v5 204 40000
+Walker2d-v5 204 50000
+Walker2d-v5 204 60000
+Walker2d-v5 204 70000
+Walker2d-v5 204 80000
+Walker2d-v5 204 90000
+Walker2d-v5 204 100000
+Walker2d-v5 204 finished 455.6361472304192

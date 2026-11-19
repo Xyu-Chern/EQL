@@ -1,0 +1,45 @@
+Reacher-misc NVIDIA A40 {'num_envs': 10, 'num_critics': 10, 'total_timesteps': 100000, 'learning_rate': 0.001, 'gamma': 0.98} [201, 202, 203, 204]
+Reacher-misc 201 10000
+Reacher-misc 201 20000
+Reacher-misc 201 30000
+Reacher-misc 201 40000
+Reacher-misc 201 50000
+Reacher-misc 201 60000
+Reacher-misc 201 70000
+Reacher-misc 201 80000
+Reacher-misc 201 90000
+Reacher-misc 201 100000
+Reacher-misc 201 finished 45.67575454711914
+Reacher-misc 202 10000
+Reacher-misc 202 20000
+Reacher-misc 202 30000
+Reacher-misc 202 40000
+Reacher-misc 202 50000
+Reacher-misc 202 60000
+Reacher-misc 202 70000
+Reacher-misc 202 80000
+Reacher-misc 202 90000
+Reacher-misc 202 100000
+Reacher-misc 202 finished 44.554908752441406
+Reacher-misc 203 10000
+Reacher-misc 203 20000
+Reacher-misc 203 30000
+Reacher-misc 203 40000
+Reacher-misc 203 50000
+Reacher-misc 203 60000
+Reacher-misc 203 70000
+Reacher-misc 203 80000
+Reacher-misc 203 90000
+Reacher-misc 203 100000
+Reacher-misc 203 finished 48.15643310546875
+Reacher-misc 204 10000
+Reacher-misc 204 20000
+Reacher-misc 204 30000
+Reacher-misc 204 40000
+Reacher-misc 204 50000
+Reacher-misc 204 60000
+Reacher-misc 204 70000
+Reacher-misc 204 80000
+Reacher-misc 204 90000
+Reacher-misc 204 100000
+Reacher-misc 204 finished 47.312904357910156

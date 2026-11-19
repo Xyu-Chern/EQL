@@ -1,0 +1,39 @@
+{
+  "task": "Walker2d-v3",
+  "method": "SAC100",
+  "config": {
+    "num_envs": 10,
+    "num_critics": 100,
+    "total_timesteps": 1000000,
+    "learning_rate": 0.001,
+    "gamma": 0.98
+  },
+  "seeds": [
+    201,
+    202,
+    203,
+    204
+  ],
+  "eval_every": 50000,
+  "backend": {
+    "gymnasium": "0.29.1",
+    "entry_point": "gymnasium.envs.mujoco.walker2d_v3:Walker2dEnv",
+    "mujoco_py": "2.1.2.14",
+    "mujoco_version": 210
+  },
+  "eval_episodes": 128,
+  "eval_protocol": "search_four.native_evaluator, common seed at every evaluation",
+  "actor_arms": null,
+  "source_sha256": {
+    "run_million_native.py": "d860b326e6d261783b019a28cb3646af2e16b8276999fea6f2930b56f656bfb3",
+    "sac.py": "d7aa94c57b991c7fa399f07da8f50f5eb71a5b3ca80ee10c7c1274bac9a20ed4",
+    "eql.py": "1b186e9a767bcb6d2ce60541fa8eb9ecc53860cd2b027fee3ed055001d975a57",
+    "search_four.py": "7f118a2bb325c03b6977dc1604e888d020367c5b0a68c38212af254ca38c08a5",
+    "adaptive_eql.py": "fc3d375cea98ced39ec805e728d265c2e2a455d8b401d0ab48bdd876c04818be",
+    "run_adaptive_tasks.py": "04ed25aaeb4bd8629a79564122e9fbde3c800f0047c50b7a3662503dce3471e8",
+    "original_bag_eql.py": "a6ab25bd02bf43d8cb57bd336027180df3de3cc9e79cd8de77a014fe8d81f3a1",
+    "bagging_buffer.py": "c665025e95ce7b0deabfa28a945fb423f648dcedb3812ba434a549368e8dd8ca",
+    "pendulum_tau_grid.py": "d4a47a938a113997b189d1206866fc05dfa4d70acf2d419b7f63ec064a0bf969",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde"
+  }
+}

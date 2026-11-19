@@ -1,0 +1,14 @@
+{
+  "seed": 202,
+  "steps": 1000000,
+  "updates": 99796,
+  "score": 431.8194069691159,
+  "devices": [
+    {
+      "node": "g3047",
+      "gpu": "NVIDIA A40",
+      "job": "43353787",
+      "from_step": 0
+    }
+  ]
+}

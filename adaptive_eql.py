@@ -10,16 +10,19 @@ from eql import EQL, compute_expectile_on_axis
 class AdaptiveEQL(EQL):
     # Configuration-free call with respect to the two expectiles. Controller
     # constants are explicit so a run can be reproduced.
-    actor_arms: tuple = struct.field(pytree_node=False, default=(0., .25, .5, .75, 1.))
+    actor_arms: tuple = struct.field(pytree_node=False, default=tuple(i / 10 for i in range(11)))
     initial_q: float = struct.field(pytree_node=False, default=.5)
     q_rate: float = struct.field(pytree_node=False, default=.05)
     bandit_rate: float = struct.field(pytree_node=False, default=.05)
     exploration: float = struct.field(pytree_node=False, default=.1)
 
+    def supports_episode_feedback(self):
+        return self.env.name in ("Pendulum-v1", "Reacher-misc")
+
     @register_init
     def init_base_state(self, rng):
-        if self.env.name != "Pendulum-v1" or self.normalize_rewards or self.normalize_observations:
-            raise ValueError("Episode feedback expects synchronized, unnormalized Pendulum-v1.")
+        if not self.supports_episode_feedback() or self.normalize_rewards or self.normalize_observations:
+            raise ValueError("Unsupported environment or normalization for episode feedback.")
         values = super().init_base_state(rng)
         # A separate RNG stream leaves EQL network, replay and action keys intact.
         key, draw = jax.random.split(jax.random.fold_in(rng, 4721))
