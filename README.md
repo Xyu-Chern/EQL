@@ -1,5 +1,11 @@
 # EQL 强化学习实验
 
+**固定 replay 方式和学习率后，怎样聚合多个 critic 的估值，会改变策略回报。** 在 Pendulum 上，只改 actor 聚合或只改 critic 目标，都比双 min 基线平均高约 27 分。分袋也改变了 critic 的行为：它使误差相关性下降，却让共同低估更频繁。到了百万步控制任务，自适应 EQL 相对 SAC-10 在 Hopper-v3 上有持续收益，在 Walker2d-v3 上没有复现。[按实验逻辑阅读完整报告](实验汇编/完整实验报告.md)
+
+报告从一个能逐回合复现 SAC 的基线出发，依次检验固定 τ、分袋和自动校准，并用同种子的学习曲线检查终点排名。Walker2d 的例子解释了为什么一次最高均值不足以决定下一版算法。[百万步逐种子数据](results/million_hopper_walker_v3/average_return.csv) · [同学习率校准对照](results/walker_calibration/paired.csv)
+
+## 算法与实现
+
 本仓库收录 **4 个算法家族**。连续控制实验使用 EQL、SAC 和 CGPO，早期 CartPole 实验还使用了 DQN。固定或自适应 τ、不同 replay 分袋方式和 critic 数量均作为家族内的配置统计。
 
 | 算法家族 | 本仓库的实现与记录 |
@@ -27,7 +33,10 @@ python -m experiments baseline --env Pendulum-v1 --method EQL --seeds 0 --output
 
 百万步训练可用 `python -m experiments million --help` 查看环境、方法和输出参数。历史训练使用的代码版本与日志见 [provenance](provenance/)，对应的输出见 [results](results/)。CGPO 的入口复用归档的训练程序，需要其 PyTorch、MuJoCo v3 和 A100 环境。
 
-## 实验清单
+## 实验数据索引
+
+<details>
+<summary>展开 18 组实验与分析的原始目录</summary>
 
 截至 2026-11-20，`results/` 中有 **18 组实验与分析**。每行对应一个结果目录。其中部分组包含多轮训练或重评。历史权重备份单独保存，早期仅有曲线的演示另列于[历史图表](figures/legacy/)。
 
@@ -52,9 +61,11 @@ python -m experiments baseline --env Pendulum-v1 --method EQL --seeds 0 --output
 | [cgpo_a100_v3](results/cgpo_a100_v3/) | CGPO 的 seed 201 本地快照覆盖 Hopper-v3 至 245,000 步、Walker2d-v3 至 232,000 步，两者均有 200,000 步配对评估。 |
 | [walker_calibration](results/walker_calibration/RESULTS_zh.md) | Walker2d-v5 仅校准 critic 的复测，8 个配置 × 4 个新种子，共 32 个十万步终点。 |
 
+</details>
+
 ## 报告与复现
 
 - [百万步主对照](results/million_hopper_walker_v3/README.md)给出 SAC-10、固定 EQL、自适应 EQL、一步分袋 EQL 和 SAC-100 的逐环境结果。
-- [11 月 18 日实验报告](实验汇编/完整实验报告.md)与[早期九章实验](实验汇编/README.md)保存当时的结果和统计口径。
+- [实验主报告](实验汇编/完整实验报告.md)解释哪些对照支持哪些结论。[早期九章实验](实验汇编/README.md)保留各轮的配置与统计口径。
 - [集群实跑代码与日志](provenance/)、[实验文件 SHA-256 清单](实验汇编/文件清单.csv)和[历史权重备份](results/million_hopper_walker_v3_backups/)用于核验。清单记录此版本 Git 对象中 `results/` 与 `provenance/` 的文件字节。
 - [大型续训状态恢复说明](大文件/README.md)提供 Release 下载地址和解包校验方法。
