@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.py[cod]
+/大文件/*.tar.gz
+/大文件/.training-states*
+/wsl-repair*.log
+/wsl-repair-status.json
+/results/**/resume.pt
+/results/**/*.writing-*

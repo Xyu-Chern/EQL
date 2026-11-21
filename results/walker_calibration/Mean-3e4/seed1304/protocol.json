@@ -1,0 +1,47 @@
+{
+  "method": "Mean-3e4",
+  "config": {
+    "num_envs": 10,
+    "num_critics": 10,
+    "total_timesteps": 100000,
+    "learning_rate": 0.0003,
+    "gamma": 0.98,
+    "tau_Q": 0.5,
+    "tau_a": 0.0
+  },
+  "task": "Walker2d-v5",
+  "seeds": [
+    1301,
+    1302,
+    1303,
+    1304
+  ],
+  "steps": 100000,
+  "calibration_starts": [
+    5000,
+    25000,
+    45000,
+    65000,
+    85000
+  ],
+  "candidates": [
+    0,
+    0.1,
+    0.3,
+    0.5
+  ],
+  "source_hashes": {
+    "run_walker_calibration.py": "33c3de61ade88d5132b40db8f0c4781662e026b9947ddab5de5cc21cffb103cf",
+    "critic_calibration.py": "3d672d697a1d00092bb1a5fc353f5a36b3987621bbf4ebcc636d24c211e47a1e",
+    "eql.py": "b70f4641d2a83a13849dca45d602447fc87554216f2d79149dcbe8bf2394dd81",
+    "sac.py": "d7aa94c57b991c7fa399f07da8f50f5eb71a5b3ca80ee10c7c1274bac9a20ed4",
+    "search_four.py": "7f118a2bb325c03b6977dc1604e888d020367c5b0a68c38212af254ca38c08a5",
+    "run_original_comparison.py": "d4bd3274affc384e376963b8ff612ec3d58bfbd8d28d81711f115b1105836fde"
+  },
+  "packages": {
+    "gymnasium": "1.4.0",
+    "mujoco": "3.17.0",
+    "jax": "0.4.38",
+    "rejax": "0.1.3"
+  }
+}

@@ -39,6 +39,9 @@ class EQL(SAC):
     tau_Q: float = struct.field(pytree_node=True, default=0.3)
     num_iters: int = struct.field(pytree_node=False, default=10)
 
+    def aggregate_target(self, qs):
+        return compute_expectile_on_axis(qs, self.tau_Q, axis=0, num_iters=self.num_iters)
+
     def update_critic(self, ts, mb):
         rng, action_rng = jax.random.split(ts.rng)
         ts = ts.replace(rng=rng)
@@ -51,12 +54,7 @@ class EQL(SAC):
                 logprob = jnp.log(action_dist.probs)
                 qs = self.vmap_critic(ts.critic_target_params, mb.next_obs)            
                 
-                next_q = compute_expectile_on_axis(
-                    qs,
-                    tau=self.tau_Q,
-                    axis=0,
-                    num_iters=self.num_iters
-                )
+                next_q = self.aggregate_target(qs)
                 q_target = next_q - alpha * logprob
                 q_target = jnp.sum(jnp.exp(logprob) * q_target, axis=1)
                 qs = jax.vmap(
@@ -73,12 +71,7 @@ class EQL(SAC):
                     method="action_log_prob",
                 )
                 qs = self.vmap_critic(ts.critic_target_params, mb.next_obs, action)
-                next_q = compute_expectile_on_axis(
-                    qs,
-                    tau=self.tau_Q,
-                    axis=0,
-                    num_iters=self.num_iters
-                )
+                next_q = self.aggregate_target(qs)
        #         print ("next_q",next_q.shape) 
        #         print ("logprob",logprob.shape) 
                 q_target = next_q - alpha * logprob
