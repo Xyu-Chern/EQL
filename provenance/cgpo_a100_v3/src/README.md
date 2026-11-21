@@ -4,7 +4,7 @@ Code release for **Sample-Efficient Diffusion-based Reinforcement Learning with 
 
 [[paper]](http://arxiv.org/abs/2605.30056)
 
-![](./asset/cgpo.png)
+![](https://raw.githubusercontent.com/wadx2019/cgpo/6958aca6e7faccb44f815b3b810192b8d21edd5e/asset/cgpo.png)
 
 ## Requirements
 Installations of [PyTorch](https://pytorch.org/) and [MuJoCo](https://github.com/deepmind/mujoco) are needed. 

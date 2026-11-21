@@ -82,4 +82,4 @@ AUC 是按环境步数积分后除以总步数的平均学习曲线高度；分�
 - `summary.json`：配对差异与硬件统计。
 - `learning_curves.png`：学习曲线，阴影为 ±1 个 seed 标准差。
 - 各环境目录：原始 JSON/JSONL、64 episode 级 NPZ、最终参数 checkpoint 与配置/source hash。
-- 复现命令与实现边界见项目根目录 `IMPLEMENTATION.md`。
+- 复现命令与实现边界见[分袋实现与测试](../../实验汇编/附录/分袋实现与测试.md)。

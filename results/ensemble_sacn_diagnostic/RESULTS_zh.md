@@ -13,7 +13,7 @@
 | actor 目标 | 最大化所有在线 critic 的最小 Q，加上熵项 | 同样使用全部 critic，Q 取 τ_a expectile；自适应版本会改变这两个 τ |
 | 多样性来源 | SAC-N 使用多个 critic；另一个算法 EDAC 额外惩罚动作梯度对齐 | 当前共享 replay 依赖独立初始化；分袋版本另行改变各 critic 的数据覆盖 |
 
-仓库的比较配置显式使用 10 个 critic。共享 replay 且 τ_Q=τ_a=0 时，代码的两处聚合都精确取 min，对应在线条件下的 SAC-N 聚合。论文检验的是离线数据支持较弱的动作是否受到更强的惩罚。它的目标和测量单个 critic 或平均 Q 的 RMSE 不同。[论文第 3 节和图 2](https://proceedings.neurips.cc/paper/2021/file/3d3d286a8d153a4a58156d0e02d8570c-Paper.pdf) · [作者训练代码](https://github.com/snu-mllab/EDAC/blob/main/lifelong_rl/trainers/q_learning/sac.py) · [EQL 聚合代码](../../eql.py)
+仓库的比较配置显式使用 10 个 critic。共享 replay 且 τ_Q=τ_a=0 时，代码的两处聚合都精确取 min，对应在线条件下的 SAC-N 聚合。论文检验的是离线数据支持较弱的动作是否受到更强的惩罚。它的目标和测量单个 critic 或平均 Q 的 RMSE 不同。[论文第 3 节和图 2](https://proceedings.neurips.cc/paper/2021/file/3d3d286a8d153a4a58156d0e02d8570c-Paper.pdf) · [作者训练代码](https://github.com/snu-mllab/EDAC/blob/main/lifelong_rl/trainers/q_learning/sac.py) · [EQL 聚合代码](../../eql/algorithms/eql.py)
 
 ## A40 复算
 
@@ -25,7 +25,7 @@
 | 20 | 0.9866 | −151.54 | −30.27 | −34.38 | −29.53 | 80.4% |
 | 50 | 0.9879 | −152.39 | −26.26 | −31.11 | −25.54 | 78.8% |
 
-最后一列只在每个网格状态的三个预设动作中取最大值。已有 critic 经常一起低估，取 min 会进一步降低估计；动作排序也有变化。这是对冻结模型的诊断。它既没有把网格动作按 replay 密度分类，也没有测出换聚合器重新训练后的因果效应。[逐 seed 数据](metrics.json) · [A40 复算脚本](probe.py)
+最后一列只在每个网格状态的三个预设动作中取最大值。已有 critic 经常一起低估，取 min 会进一步降低估计；动作排序也有变化。这是对冻结模型的诊断。它既没有把网格动作按 replay 密度分类，也没有测出换聚合器重新训练后的因果效应。[逐 seed 数据](metrics.json) · [A40 复算脚本](../../analysis/ensemble_probe.py)
 
 另有实际重新训练的固定 N=10 对照。双 min 的平均回报是 −185.05，τ_Q=0.1、τ_a=0.7 得到 −151.94，四个 seeds 均提高。这两个 τ 取自同一批 seeds 上的网格搜索，不能充作独立确认结果。[逐组训练回报](../pendulum_tau_grid/RESULTS_zh.md)
 
@@ -39,7 +39,7 @@
 | 20 | 4.179 | 4.094 | −0.084 |
 | 50 | 4.865 | 4.854 | −0.011 |
 
-从 10 扩到 50，两组动作的压价都变大，随机动作并未受到更大的平均惩罚。这与“增加 N 主要提高整体悲观程度”的解释一致。冻结策略动作只代表最终策略；在线 replay 混合了多个历史策略。严格验证 SAC-N 论文的分布内外机制还需要直接采样 replay 动作来配对比较。[各 seed 的惩罚差](action_gap.json) · [计算脚本](action_gap.py)
+从 10 扩到 50，两组动作的压价都变大，随机动作并未受到更大的平均惩罚。这与“增加 N 主要提高整体悲观程度”的解释一致。冻结策略动作只代表最终策略；在线 replay 混合了多个历史策略。严格验证 SAC-N 论文的分布内外机制还需要直接采样 replay 动作来配对比较。[各 seed 的惩罚差](action_gap.json) · [计算脚本](../../analysis/action_gap.py)
 
 ## 区分规模与聚合的对照
 

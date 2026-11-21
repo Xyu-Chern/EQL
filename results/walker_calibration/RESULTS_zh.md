@@ -29,4 +29,4 @@
 
 AEQL 和固定均值采用相同的冻结采样协议。在 5k、25k、45k、65k、85k 步尝试开启窗口，冻结行为策略、温度和校准用的目标网络；训练网络照常更新。每个并行环境跳过首个可能不完整的回合，保留随后两个完整回合，共 20 个回合。10 个回合选参，另 10 个回合验证相对当前规则的逐回合误差下降，超过一个配对标准误才切换。SAC 和原 555 配置保留原有实时采样。因此与固定均值的对照最能检验自适应本身的贡献。训练种子只有四个，配对表中的区间是探索性的配对 t 区间，未经多重比较校正。
 
-[逐种子终点](seeds.csv) · [方法汇总](summary.csv) · [逐种子配对差](paired.csv) · [每个校准窗口](windows.csv) · [算法](../../critic_calibration.py) · [训练入口](../../run_walker_calibration.py) · [汇总与绘图](../../summarize_walker_calibration.py)
+[逐种子终点](seeds.csv) · [方法汇总](summary.csv) · [逐种子配对差](paired.csv) · [每个校准窗口](windows.csv) · [算法](../../eql/algorithms/calibration.py) · [训练入口](../../experiments/walker_calibration.py) · [汇总与绘图](../../analysis/walker_calibration.py)

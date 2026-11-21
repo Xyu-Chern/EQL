@@ -14,7 +14,7 @@
 
 各行均按相同任务、版本、步数和评估动作口径配对。SAC-10 在 actor 与目标两处都取十个 critic 的最小值。标准双 critic SAC 需要另做同预算对照。Hopper-v5 另一次 A40 重跑的 SAC-10 为 329.46，此时 AEQL 略高于其均值，因此这个任务现有的平均差对基线批次敏感。[10 万步逐种子数据](../results/adaptive_tasks_11arms_rtx6000/all_methods_paired.csv) · [百万步确定性重评](../results/million_hopper_walker_v3/deterministic_eval/summary.csv)
 
-Walker2d-v5 的四个训练种子分别给控制器 19、24、22、25 次反馈，实际尝试过 8、11、10、9 个 actor 档位。当前实现把本轮原始回报相对于最近五轮的标准化变化记给本轮选择。各轮共享已训练的 actor、critic 和 replay，并且每轮都可能改变目标 expectile。一次回报变化同时受到先前更新和当前策略进步的影响。Reacher 的四个种子各有 97 轮反馈，最终目标 expectile 约为 0.82、0.93、0.75、0.84，四个种子均输给 SAC-10。增加反馈次数和把目标往乐观方向推，都未显示足以恢复 Reacher 的回报。这些记录提示了两个待检验的原因，不能单凭日志认定因果。[控制器](../adaptive_eql.py) · [原始逐轮记录目录](../results/adaptive_tasks_11arms_rtx6000)
+Walker2d-v5 的四个训练种子分别给控制器 19、24、22、25 次反馈，实际尝试过 8、11、10、9 个 actor 档位。当前实现把本轮原始回报相对于最近五轮的标准化变化记给本轮选择。各轮共享已训练的 actor、critic 和 replay，并且每轮都可能改变目标 expectile。一次回报变化同时受到先前更新和当前策略进步的影响。Reacher 的四个种子各有 97 轮反馈，最终目标 expectile 约为 0.82、0.93、0.75、0.84，四个种子均输给 SAC-10。增加反馈次数和把目标往乐观方向推，都未显示足以恢复 Reacher 的回报。这些记录提示了两个待检验的原因，不能单凭日志认定因果。[控制器](../eql/algorithms/adaptive.py) · [原始逐轮记录目录](../results/adaptive_tasks_11arms_rtx6000)
 
 Walker2d-v5 还有一个重要对照。固定 EQL 用学习率 0.0003、目标 expectile 0.3、actor expectile 0.5，独立复测回报为 555.00，四个种子全胜历史 SAC-10。AEQL 和 SAC-10 当时用的是 0.001。这里同时有学习率和聚合方式两个差别。应优先交叉复测这两个学习率，避免把固定 EQL 的全部优势归给某个 expectile。[搜索与独立复测](../results/search_four/RESULTS_zh.md)
 
@@ -45,7 +45,7 @@ $$
 \left(\frac{\sum_j w_j d_j(G_j-m_j)}{\sum_j w_j d_j^2}\right).
 $$
 
-其中各轨迹的总权重相同。分母为零时两种估值处处相等，此时保留当前值。公式针对精确 expectile；双 critic 可直接用闭式实现。十 critic 使用自己的多点 expectile，不能套用两点公式。[现有聚合实现](../eql.py)
+其中各轨迹的总权重相同。分母为零时两种估值处处相等，此时保留当前值。公式针对精确 expectile；双 critic 可直接用闭式实现。十 critic 使用自己的多点 expectile，不能套用两点公式。[现有聚合实现](../eql/algorithms/eql.py)
 
 **能证明的部分。** 固定策略、温度、两个目标 critic 和校准状态动作分布，设软回报与训练目标匹配且有有限二阶矩。总体风险为 R(τ)=E[(m+τd−G)²]。它在零点的右导数为 −2E[d(G−m)]。因此只要 E[d(G−m)]>0，向均值方向迈出充分小的一步就会严格降低总体预测风险。当回报标签条件无偏时，预测对真实软 Q 的平方误差也下降，因为两种风险仅相差与 τ 无关的条件方差。若该期望≤0，区间中的最优解包含零。这个条件衡量的是 **min 低估的地方，两个 critic 是否恰好有可利用的分歧**。当所有 critic 一起犯错且几乎重合，调 τ 的作用很小。以上证明限定在冻结快照，实时估计要经过留出验证，策略回报仍须由独立训练测量。
 

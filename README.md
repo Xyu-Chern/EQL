@@ -4,10 +4,28 @@
 
 | 算法家族 | 本仓库的实现与记录 |
 |---|---|
-| EQL | [固定 expectile](eql.py)、[分袋 replay](original_bag_eql.py)、[自适应 τ](adaptive_eql.py) 和 [仅校准 critic 的变体](critic_calibration.py) |
-| SAC | [实现](sac.py)和[在线 SAC-N 实验入口](run_online_sac_n.py)。Walker2d 复测包含 SAC-2 和 SAC-10，百万步主对照包含 SAC-10 和 SAC-100。 |
-| CGPO | [集群实跑代码](provenance/cgpo_a100_v3/src/)和[两个环境的阶段性结果](results/cgpo_a100_v3/) |
-| DQN | [早期 Rejax 入口](test1_v2.py)和[CartPole 回报曲线](figures/legacy/cartpole_dqn_returns.png) |
+| EQL | [固定 expectile](eql/algorithms/eql.py)、[分袋 replay](eql/algorithms/original_bag.py)、[自适应 τ](eql/algorithms/adaptive.py) 和 [仅校准 critic 的变体](eql/algorithms/calibration.py) |
+| SAC | [实现](eql/algorithms/sac.py)和[在线 SAC-N 实验入口](experiments/sac_n.py)。Walker2d 复测包含 SAC-2 和 SAC-10，百万步主对照包含 SAC-10 和 SAC-100。 |
+| CGPO | [训练入口](experiments/cgpo.py)、[集群实跑代码](provenance/cgpo_a100_v3/src/)和[两个环境的阶段性结果](results/cgpo_a100_v3/) |
+| DQN | [早期 Rejax 入口](experiments/rejax_baseline.py)和[CartPole 回报曲线](figures/legacy/cartpole_dqn_returns.png) |
+
+## 代码入口
+
+| 需要做什么 | 入口 |
+|---|---|
+| 修改 EQL、SAC 或分袋变体 | [算法实现](eql/algorithms/)、[expectile 聚合](eql/expectiles.py)、[replay buffer](eql/replay.py) |
+| 修改原生 MuJoCo 交互、评估或默认训练参数 | [环境适配与评估](eql/native.py)、[共享训练配置](eql/training.py) |
+| 启动训练或复跑对照 | [实验入口](experiments/)，运行 `python -m experiments --help` 列出协议，运行 `python -m experiments walker_calibration --help` 查看参数。 |
+| 汇总已有结果、重评或绘图 | [分析模块](analysis/) |
+| 验证算法行为 | [测试](tests/)，从仓库根目录运行 `python -m pytest -q`。 |
+
+从仓库根目录、已安装项目依赖的 Linux 或 WSL 环境运行。下面的命令在新目录保存一个 Pendulum 对照种子的结果，使用 GPU。
+
+```bash
+python -m experiments baseline --env Pendulum-v1 --method EQL --seeds 0 --output runs/pendulum-eql
+```
+
+百万步训练可用 `python -m experiments million --help` 查看环境、方法和输出参数。历史训练使用的代码版本与日志见 [provenance](provenance/)，对应的输出见 [results](results/)。CGPO 的入口复用归档的训练程序，需要其 PyTorch、MuJoCo v3 和 A100 环境。
 
 ## 实验清单
 

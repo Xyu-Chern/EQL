@@ -5,7 +5,7 @@
 学习率 3e-4、gamma=.98、Polyak=.99、batch=256、fill_buffer=2048、buffer_size=131072；EQL tau_a=.7/tau_Q=.3。
 SAC 是用户 sac.py 的 10-critic min-SAC，不能标成标准双 critic SAC。
 bagging 使用一步轨迹片段、每条数据复制到两个不同袋；每个 critic 只从自己的袋采样，target 使用完整 ensemble，actor 不变。
-每袋容量保留 131072；并非完整 episode 分袋。具体配置来源和实现边界见 ../../ORIGINAL_COMPARISON.md。
+每袋容量保留 131072；并非完整 episode 分袋。具体配置来源和实现边界见 [原配置与复现](../../实验汇编/附录/原配置与复现.md)。
 
 每个 seed 最终评估 128 个随机策略 episode；下表 ± 为四个训练 seeds 的样本标准差。固定最终 checkpoint，不挑最好结果。
 
